@@ -3,7 +3,7 @@ homeassistant:
 mqtt:
   server: mqtt://192.168.111.3:1883
   user: mqtt_user
-  password: "***MASKED***"  
+  password: "***MASKED***"  # Original: rim-hilt-TOPPLE-ultra (nicht in GitHub)
   base_topic: zigbee2mqtt
 serial:
   port: /dev/ttyUSB0
@@ -18,7 +18,6 @@ ota:
 devices:
   '0x00158d0007e1e5da':
     friendly_name: Aqara Cube
-    legacy: true
   '0x0017880100f56d33':
     friendly_name: Wohnzimmer Decke - HUE RGB
   '0x0017880102876832':
@@ -49,27 +48,22 @@ devices:
     friendly_name: Dach - SWITCH - HUE TAB
   '0x0017880102e2c976':
     friendly_name: Sabine - HUE DIMMER
-    legacy: true
   '0x0017880104b60b6f':
     friendly_name: Dach - HUE MOTION SENSOR Sabine
   '0x0017880102e2df58':
     friendly_name: Wolfgang - HUE DIMMER
-    legacy: true
   '0x001788010b3a2e22':
     friendly_name: Salon NightLight - HUE WHITE E14
   '0x001788010b220661':
     friendly_name: Sabine Regal - HUE RGB
   '0x0017880104ac838d':
     friendly_name: Noah - HUE DIMMER
-    legacy: true
   '0xd0cf5efffeba5a61':
     friendly_name: Küche - Ikea E14
   '0x0017880108712530':
     friendly_name: Küche - HUE DIMMER
-    legacy: true
   '0x0017880104acce12':
     friendly_name: Wohnzimmer - HUE DIMMER
-    legacy: true
   '0x00158d0008300535':
     friendly_name: TempHumPress-Sensor
   '0x00158d000808fc9f':

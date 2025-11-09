@@ -273,10 +273,6 @@
         domain: light
         entity_id: light.kuche_stehlampe_hue_rgb
         type: brightness_increase
-      - device_id: cea3423730ed7cf992754a13dfde34d1
-        domain: light
-        entity_id: light.kuche_ikea_e14
-        type: brightness_increase
       - device_id: 0eacebb586635562ec4719f6740470bf
         domain: light
         entity_id: light.kuche_tisch_links
@@ -293,10 +289,6 @@
       - device_id: 308af6f8058bee0f3fd5f93f0bd53008
         domain: light
         entity_id: light.kuche_stehlampe_hue_rgb
-        type: brightness_decrease
-      - device_id: cea3423730ed7cf992754a13dfde34d1
-        domain: light
-        entity_id: light.kuche_ikea_e14
         type: brightness_decrease
       - device_id: 0eacebb586635562ec4719f6740470bf
         domain: light
