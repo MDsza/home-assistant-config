@@ -3,7 +3,7 @@ homeassistant:
 mqtt:
   server: mqtt://192.168.111.3:1883
   user: mqtt_user
-  password: "***MASKED***"  # Original: rim-hilt-TOPPLE-ultra (nicht in GitHub)
+  password: rim-hilt-TOPPLE-ultra
   base_topic: zigbee2mqtt
 serial:
   port: /dev/ttyUSB0
@@ -13,8 +13,7 @@ frontend:
 advanced:
   log_level: info
 device_options: {}
-ota:
-  zigbee_ota_override_index_location: my_index.json
+ota: {}
 devices:
   '0x00158d0007e1e5da':
     friendly_name: Aqara Cube

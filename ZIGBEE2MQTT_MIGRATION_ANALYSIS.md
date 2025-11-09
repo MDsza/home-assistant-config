@@ -666,3 +666,212 @@ Separater V2 Blueprint mit angepassten Event-Names:
 - 2 Blueprints erstellt (V1 + V2 Dimmer) ✅
 - 3 MQTT Device Trigger Automationen ✅
 - 100% Z2M 2.6.3 kompatibel ✅
+
+---
+
+## POST-MIGRATION FIXES (2025-11-09 Abend)
+
+### 🐛 Problem 1: Küche Automation Invalid Device ID
+
+**Fehler:**
+```
+Unknown device 'cea3423730ed7cf992754a13dfde34d1'
+Automation: Küche - Hue Dimmer Switch (Z2M 2.x)
+```
+
+**Root Cause:**
+- IKEA E14 Lampe (`light.kuche_ikea_e14`) hatte veraltete device_id
+- Device existiert in Z2M, aber HA device registry hatte alte ID
+
+**Lösung:**
+```yaml
+# Entfernt aus up_released & down_released:
+- device_id: cea3423730ed7cf992754a13dfde34d1  # ← INVALID
+  domain: light
+  entity_id: light.kuche_ikea_e14
+  type: brightness_increase
+```
+
+**Resultat:** Automation funktioniert mit 4 verbleibenden Lampen (Stehlampe + 3x Tisch)
+
+---
+
+### 🧹 Cleanup: Legacy Flags in Z2M Config
+
+**Problem:** 6 Geräte hatten noch `legacy: true` Flag:
+- Aqara Cube
+- 5x Hue Dimmers (Sabine, Wolfgang, Noah, Küche, Wohnzimmer)
+
+**Config vor Cleanup:**
+```yaml
+devices:
+  '0x00158d0007e1e5da':
+    friendly_name: Aqara Cube
+    legacy: true  # ← UNNÖTIG in Z2M 2.6.3
+```
+
+**Fix:** Alle `legacy: true` Zeilen entfernt
+
+**Grund:** Nach Migration auf MQTT Device Triggers sind Legacy Flags überflüssig
+
+---
+
+### 🔧 Problem 2: Z2M OTA Config Issue
+
+**Symptom:** Z2M startete nicht nach Config-Änderung
+```
+Refusing to start because configuration is not valid
+- ota must be object
+```
+
+**Root Cause:** Fehlerhafte OTA Sektion in `/homeassistant/zigbee2mqtt/configuration.yaml`
+
+**Problem Config:**
+```yaml
+ota:  # ← Leere Zeile = INVALID
+```
+
+**ODER:**
+```yaml
+ota:
+  zigbee_ota_override_index_location: my_index.json  # ← Datei existiert NICHT
+```
+
+**Korrekte Config:**
+```yaml
+ota: {}  # Nutzt Standard Z2M OTA Repository
+```
+
+**Learning:** 
+- `ota:` Sektion MUSS ein Objekt sein (min. `{}`)
+- Leere Zeile oder non-existente Index-Files führen zum Startup-Fehler
+- Standard `ota: {}` lädt Updates von Z2M Default Repository
+
+---
+
+### 🎯 Problem 3: Hue Tap Dial OTA Update (MONATE FEHLGESCHLAGEN)
+
+**Historie:**
+- Gerät: Bad Hue Tap Dial Switch Black
+- Problem: Update schlägt seit Monaten fehl
+- Installed: 33569555
+- Latest: 33569561 (nur 6 Versionen Unterschied!)
+
+#### Versuch 1: MQTT Command (FEHLGESCHLAGEN)
+
+```bash
+mosquitto_pub -t 'zigbee2mqtt/Bad Hue Tap Dial Switch Black/set/update' -m 'update'
+```
+
+**Fehler:**
+```
+error: No converter available for 'update' on 'Bad Hue Tap Dial Switch Black'
+```
+
+**Learning:** Philips Hue Tap Dial unterstützt **KEIN** OTA via MQTT Command!
+
+#### Versuch 2: HA UI Update (FEHLGESCHLAGEN)
+
+**Fehler:**
+```
+Update of 'Bad Hue Tap Dial Switch Black' failed
+(No image currently available)
+```
+
+**Root Cause:** OTA Override Index fehlte → Z2M hatte kein Image im Cache
+
+#### Versuch 3: OTA Fix + Perfect Timing (ERFOLG!)
+
+**Config Fix:**
+```yaml
+# VORHER (BROKEN):
+ota:
+  zigbee_ota_override_index_location: my_index.json  # Datei fehlt!
+
+# NACHHER (WORKING):
+ota: {}  # Standard Repository
+```
+
+**Timing-Problem:**
+- Tap Dial ist batteriebetrieben → schläft nach wenigen Sekunden
+- OTA Request kam zu spät → Device schlief schon
+
+**Erfolgreiche Strategie:**
+1. Device DIREKT am Coordinator platzieren (Link Quality: 65+)
+2. Update in HA UI klicken
+3. **SOFORT** intensiv am Dial drehen/Buttons drücken (10x schnell!)
+4. Hält Device 30+ Sekunden wach
+5. OTA Transfer startet erfolgreich
+
+**Resultat (21:37 Uhr):**
+```
+Progress: 9.59%
+Remaining: ~19 minutes
+Link Quality: 54-65 (Exzellent!)
+State: updating ✅
+```
+
+**Timeline:**
+```
+21:32:37 - Update started
+21:35:34 - 2.38% (≈23 min)
+21:36:04 - 4.78% (≈21 min)
+21:36:34 - 7.19% (≈20 min)
+21:37:04 - 9.59% (≈19 min)
+...stabiler Progress ~2.4%/30s...
+21:45:37 - 50.36% (≈10 min)
+21:54:41 - 92.26% (≈2 min)
+21:55:11 - 94.57% (≈70 sec)
+21:56:20 - 100% (remaining: 9 sec)
+21:56:41 - ✅ FINISHED UPDATE
+```
+
+**Erfolg:**
+```
+Device: Bad Hue Tap Dial Switch Black
+Firmware Vorher: 2.59.19 (Build 20220316)
+Firmware Nachher: 2.77.39 (Build 20241001)
+Gesamt-Dauer: ~24 Minuten
+Status: ✅ SUCCESS - Device neu konfiguriert, funktional
+```
+
+**Key Learnings - Hue Tap Dial OTA:**
+
+1. **OTA Image Verfügbarkeit:**
+   - NIEMALS custom `zigbee_ota_override_index_location` ohne existente Datei
+   - Standard `ota: {}` funktioniert zuverlässig
+   - Z2M lädt Images automatisch vom Default Repository
+
+2. **Battery Device Sleep Problem:**
+   - Tap Dial schläft nach ~10 Sekunden ohne Interaction
+   - OTA Request muss erfolgen WÄHREND Device wach ist
+   - Lösung: Intensive Interaction direkt nach Update-Klick
+
+3. **Perfect Timing Strategie:**
+   ```
+   1. Device AM Coordinator (beste Signal Quality)
+   2. HA UI: "Aktualisieren" klicken
+   3. SOFORT: 10x schnell drehen/drücken
+   4. Device bleibt wach → OTA startet
+   5. Transfer läuft dann autonom weiter (~20 min)
+   ```
+
+4. **Nicht verwenden:**
+   - ❌ MQTT Command (`/set/update`) - nicht unterstützt
+   - ❌ Z2M Frontend (Port 8099) - oft nur Container-intern
+   - ✅ HA UI Device Update - funktioniert wenn OTA Config korrekt
+
+---
+
+## Zusammenfassung Post-Migration Fixes
+
+| Fix | Problem | Lösung | Status |
+|-----|---------|--------|--------|
+| Küche Automation | Invalid device_id IKEA E14 | Device Actions entfernt | ✅ Fixed |
+| Legacy Flags | 6x `legacy: true` überflüssig | Alle entfernt | ✅ Cleaned |
+| OTA Config | Invalid/missing OTA config | `ota: {}` gesetzt | ✅ Fixed |
+| Tap Dial Update | Monate fehlgeschlagen | OTA fix + Perfect Timing | ✅ SUCCESS (2.59.19→2.77.39) |
+| Weitere Updates | 6+ Devices wartend | Button-Trick angewendet | ✅ 7 parallel laufend |
+
+**Letzte Aktualisierung:** 2025-11-09 22:07 Uhr
+
