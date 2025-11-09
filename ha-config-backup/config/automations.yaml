@@ -1,0 +1,1274 @@
+- id: '1651406107861'
+  alias: 'Salon - Motion > Notification '
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: db7a69c4fb45687cd00204042cd7d24c
+    entity_id: binary_sensor.dach_hue_motion_sensor_occupancy
+    domain: binary_sensor
+  condition: []
+  action:
+  - device_id: 2dc7a4a7aa6e1537ce6730b84c46feda
+    domain: mobile_app
+    type: notify
+    message: Bewegung erkannt am {{ now().strftime("%d.%m.%y um %H:%M:%S") }} {{   states.switch.vent_mbr.state}}
+  mode: single
+- id: '1651785745831'
+  alias: _NFC Tag Test ist gescannt
+  description: ''
+  trigger:
+  - platform: tag
+    tag_id: 1a3548e2-414f-4843-b6f9-85568919fc95
+  condition: []
+  action:
+  - device_id: 2dc7a4a7aa6e1537ce6730b84c46feda
+    domain: mobile_app
+    type: notify
+    message: Tag Test erkannt
+  mode: single
+- id: '1651957558052'
+  alias: Salon - Motion Sensor (NightWatcher) > TimeSlot > Switch on + off
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: db7a69c4fb45687cd00204042cd7d24c
+    entity_id: binary_sensor.dach_hue_motion_sensor_occupancy
+    domain: binary_sensor
+  condition:
+  - condition: time
+    after: '22:00:00'
+    before: 07:00:00
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+    - sat
+    - sun
+  action:
+  - service: scene.turn_on
+    target:
+      entity_id: scene.salon_night_light
+    metadata: {}
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 20
+      milliseconds: 0
+  - type: turn_off
+    device_id: c6119e008987b5dbc6667402bd79eb71
+    entity_id: light.salon_nightlight_hue_white_e14
+    domain: light
+  mode: single
+- id: 1651963550837_migrated
+  alias: Noah  - Hue Dimmer Switch (Z2M 2.x)
+  description: Migrated to Z2M 2.x compatible blueprint
+  use_blueprint:
+    path: z2m_hue_dimmer/hue_dimmer_z2m.yaml
+    input:
+      controller: Noah - HUE DIMMER
+      base_topic: zigbee2mqtt
+      on_released:
+      - if:
+        - condition: time
+          after: '20:00:00'
+          before: 06:00:00
+          weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+          - sat
+          - sun
+        then:
+        - service: scene.turn_on
+          metadata: {}
+          target:
+            entity_id: scene.noah_day_light
+        else:
+        - service: scene.turn_on
+          metadata: {}
+          target:
+            entity_id: scene.noah_day_light_bright
+      on_held:
+      - service: scene.turn_on
+        target:
+          entity_id: scene.noah_day_light_bright
+        metadata: {}
+      off_released:
+      - service: light.turn_off
+        data: {}
+        target:
+          area_id: noah
+      off_held:
+      - service: scene.turn_on
+        metadata: {}
+        target:
+          entity_id: scene.noah_night_light
+      up_released:
+      - device_id: ce3e2ac549f6092c57629f0f670f9e5c
+        domain: light
+        entity_id: light.noah_1_play_rgb
+        type: brightness_increase
+      - device_id: 9985e6805be001706242942e260491a0
+        domain: light
+        entity_id: light.noah_2_play_rgb
+        type: brightness_increase
+      - device_id: c6b9c03a91f070e6a34c32e319e4750b
+        domain: light
+        entity_id: light.noah_decke
+        type: brightness_increase
+      - device_id: b79c232f74253a796bc35c3dd0fbb740
+        domain: light
+        entity_id: light.noahs_nanoleaf_light_panels_5a_06_5
+        type: brightness_increase
+      - device_id: d603f3ce01a674312d94b8dac1f8f941
+        domain: light
+        entity_id: light.noah_bodenlampe
+        type: brightness_increase
+      - device_id: 19d25283090a60d4b2654fae752c6c2a
+        domain: light
+        entity_id: light.noah_kommode
+        type: brightness_increase
+      - device_id: 5de2436eeca2b33ec8a192b57667e12c
+        domain: light
+        entity_id: 9a8e1366813009742557880d4baf0d12
+        type: brightness_increase
+      up_held:
+      - service: scene.turn_on
+        target:
+          entity_id: scene.noah_effect_kosmos_duplizieren
+        metadata: {}
+      down_released:
+      - device_id: ce3e2ac549f6092c57629f0f670f9e5c
+        domain: light
+        entity_id: light.noah_1_play_rgb
+        type: brightness_decrease
+      - device_id: 9985e6805be001706242942e260491a0
+        domain: light
+        entity_id: light.noah_2_play_rgb
+        type: brightness_decrease
+      - device_id: c6b9c03a91f070e6a34c32e319e4750b
+        domain: light
+        entity_id: light.noah_decke
+        type: brightness_decrease
+      - device_id: b79c232f74253a796bc35c3dd0fbb740
+        domain: light
+        entity_id: light.noahs_nanoleaf_light_panels_5a_06_5
+        type: brightness_decrease
+      - device_id: d603f3ce01a674312d94b8dac1f8f941
+        domain: light
+        entity_id: light.noah_bodenlampe
+        type: brightness_decrease
+      - device_id: 19d25283090a60d4b2654fae752c6c2a
+        domain: light
+        entity_id: light.noah_kommode
+        type: brightness_decrease
+      - device_id: 5de2436eeca2b33ec8a192b57667e12c
+        domain: light
+        entity_id: 9a8e1366813009742557880d4baf0d12
+        type: brightness_decrease
+- id: 1652021450999_migrated
+  alias: Wohnzimmer  - Hue Dimmer Switch (Z2M 2.x)
+  description: Migrated to Z2M 2.x compatible blueprint
+  use_blueprint:
+    path: z2m_hue_dimmer/hue_dimmer_z2m.yaml
+    input:
+      controller: Wohnzimmer - HUE DIMMER
+      base_topic: zigbee2mqtt
+      on_released:
+      - target:
+          entity_id: scene.wohnzimmer_day_light
+        metadata: {}
+        action: scene.turn_on
+        data: {}
+      on_held:
+      - target:
+          entity_id: scene.wohnzimmer_day_bright_light
+        metadata: {}
+        action: scene.turn_on
+        data: {}
+      off_released:
+      - data: {}
+        target:
+          area_id: 1_og_wohnzimmer
+        action: light.turn_off
+      off_held:
+      - metadata: {}
+        target:
+          entity_id: scene.wohnzimmer_night_light
+        action: scene.turn_on
+        data: {}
+      up_released:
+      - device_id: 818941ae4229e07a84f4ed9c645a4303
+        domain: light
+        entity_id: light.wohnzimmer_decke_hue_rgb_2
+        type: brightness_increase
+      - device_id: b7fc5061a97f7c3177521b04b63fb810
+        domain: light
+        entity_id: light.wohnzimmer_regal_hue_white_2
+        type: brightness_increase
+      - device_id: dbeffd1b0620169577e417f98c9a9fbe
+        domain: light
+        entity_id: f4db473c5a23faffeafb2ceefdb2ee48
+        type: brightness_increase
+      - device_id: 8045965449f6f344d8dbcb69d42f4732
+        domain: light
+        entity_id: 56782d91078b49f0e67a7dd735615b16
+        type: brightness_increase
+      down_released:
+      - device_id: 818941ae4229e07a84f4ed9c645a4303
+        domain: light
+        entity_id: light.wohnzimmer_decke_hue_rgb_2
+        type: brightness_decrease
+      - device_id: b7fc5061a97f7c3177521b04b63fb810
+        domain: light
+        entity_id: light.wohnzimmer_regal_hue_white_2
+        type: brightness_decrease
+      - device_id: dbeffd1b0620169577e417f98c9a9fbe
+        domain: light
+        entity_id: f4db473c5a23faffeafb2ceefdb2ee48
+        type: brightness_decrease
+      - device_id: 8045965449f6f344d8dbcb69d42f4732
+        domain: light
+        entity_id: 56782d91078b49f0e67a7dd735615b16
+        type: brightness_decrease
+- id: 1652023120401_migrated
+  alias: Küche  - Hue Dimmer Switch (Z2M 2.x)
+  description: Migrated to Z2M 2.x compatible blueprint
+  use_blueprint:
+    path: z2m_hue_dimmer/hue_dimmer_z2m.yaml
+    input:
+      controller: Küche - HUE DIMMER
+      base_topic: zigbee2mqtt
+      on_released:
+      - service: scene.turn_on
+        target:
+          entity_id: scene.kuche_tisch_relax_orange_duplizieren
+        metadata: {}
+      on_held:
+      - type: turn_on
+        device_id: 78d4917e718748d0cb13e368ae10a3c6
+        entity_id: 3b18c2ad6e0fdab8472218b4304dc4dc
+        domain: switch
+      off_released:
+      - service: light.turn_off
+        data: {}
+        target:
+          device_id:
+          - 0eacebb586635562ec4719f6740470bf
+          - fc218d058f24399590ab5795bfcd20a4
+          - 7498b990970e782ecb81741e8e44898a
+      off_held:
+      - type: turn_off
+        device_id: 78d4917e718748d0cb13e368ae10a3c6
+        entity_id: 3b18c2ad6e0fdab8472218b4304dc4dc
+        domain: switch
+      up_released:
+      - device_id: 308af6f8058bee0f3fd5f93f0bd53008
+        domain: light
+        entity_id: light.kuche_stehlampe_hue_rgb
+        type: brightness_increase
+      - device_id: cea3423730ed7cf992754a13dfde34d1
+        domain: light
+        entity_id: light.kuche_ikea_e14
+        type: brightness_increase
+      - device_id: 0eacebb586635562ec4719f6740470bf
+        domain: light
+        entity_id: light.kuche_tisch_links
+        type: brightness_increase
+      - device_id: fc218d058f24399590ab5795bfcd20a4
+        domain: light
+        entity_id: light.kuche_tisch_mitte
+        type: brightness_increase
+      - device_id: 7498b990970e782ecb81741e8e44898a
+        domain: light
+        entity_id: light.kuche_tisch_rechts
+        type: brightness_increase
+      down_released:
+      - device_id: 308af6f8058bee0f3fd5f93f0bd53008
+        domain: light
+        entity_id: light.kuche_stehlampe_hue_rgb
+        type: brightness_decrease
+      - device_id: cea3423730ed7cf992754a13dfde34d1
+        domain: light
+        entity_id: light.kuche_ikea_e14
+        type: brightness_decrease
+      - device_id: 0eacebb586635562ec4719f6740470bf
+        domain: light
+        entity_id: light.kuche_tisch_links
+        type: brightness_decrease
+      - device_id: fc218d058f24399590ab5795bfcd20a4
+        domain: light
+        entity_id: light.kuche_tisch_mitte
+        type: brightness_decrease
+      - device_id: 7498b990970e782ecb81741e8e44898a
+        domain: light
+        entity_id: light.kuche_tisch_rechts
+        type: brightness_decrease
+- id: 1652024123610_migrated
+  alias: Wolfgang - Hue Dimmer Switch (Z2M 2.x)
+  description: Migrated to Z2M 2.x compatible blueprint
+  use_blueprint:
+    path: z2m_hue_dimmer/hue_dimmer_z2m.yaml
+    input:
+      controller: Wolfgang - HUE DIMMER
+      base_topic: zigbee2mqtt
+      on_released:
+      - service: scene.turn_on
+        target:
+          entity_id: scene.wolfgang_day_light_orange
+        metadata: {}
+      on_held:
+      - service: scene.turn_on
+        target:
+          entity_id: scene.wolfgang_day_light
+        metadata: {}
+      off_released:
+      - service: light.turn_off
+        data: {}
+        target:
+          area_id: 2_og_dach
+      off_held:
+      - service: light.turn_off
+        data: {}
+        target:
+          device_id: 566e85dfb3ce4a44747014247dcfbf27
+      up_released:
+      - device_id: e930ffb74784249615c2d00846814395
+        domain: light
+        entity_id: light.wolfgang_desk_1_top_play_rgb
+        type: brightness_increase
+      - device_id: a55ae56461966d1c2bc1788f1a129cc1
+        domain: light
+        entity_id: light.wolfgang_desk_1_left_play_rgb
+        type: brightness_increase
+      - device_id: 6dba35d06d292e3a0b10f20c7c443181
+        domain: light
+        entity_id: light.wolfgang_desk_1_right_play_rgb
+        type: brightness_increase
+      - device_id: 566e85dfb3ce4a44747014247dcfbf27
+        domain: light
+        entity_id: light.wolfgang_desk_2_top_play_rgb
+        type: brightness_increase
+      down_released:
+      - device_id: e930ffb74784249615c2d00846814395
+        domain: light
+        entity_id: light.wolfgang_desk_1_top_play_rgb
+        type: brightness_decrease
+      - device_id: a55ae56461966d1c2bc1788f1a129cc1
+        domain: light
+        entity_id: light.wolfgang_desk_1_left_play_rgb
+        type: brightness_decrease
+      - device_id: 6dba35d06d292e3a0b10f20c7c443181
+        domain: light
+        entity_id: light.wolfgang_desk_1_right_play_rgb
+        type: brightness_decrease
+      - device_id: 566e85dfb3ce4a44747014247dcfbf27
+        domain: light
+        entity_id: light.wolfgang_desk_2_top_play_rgb
+        type: brightness_decrease
+- id: '1654108920163'
+  alias: Server - HUE MOTION Sensor
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: 933e722ed72b48d07ece5080ac7669fc
+    entity_id: binary_sensor.server_hue_motion_sensors_occupancy
+    domain: binary_sensor
+  condition: []
+  action:
+  - type: toggle
+    device_id: 5de2436eeca2b33ec8a192b57667e12c
+    entity_id: light.wohnzimmer_kommode_hue_rgb
+    domain: light
+  mode: single
+- id: '1654108920794'
+  alias: Server - HUE MOTION Sensor
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: 933e722ed72b48d07ece5080ac7669fc
+    entity_id: binary_sensor.server_hue_motion_sensors_occupancy
+    domain: binary_sensor
+  condition: []
+  action:
+  - type: toggle
+    device_id: 5de2436eeca2b33ec8a192b57667e12c
+    entity_id: light.wohnzimmer_kommode_hue_rgb
+    domain: light
+  mode: single
+- id: '1654109688280'
+  alias: Küche - HUE MOTION Sensor
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: 7142a106adeea865ace8659ead25393b
+    entity_id: binary_sensor.kuche_hue_motion_sensor_new_occupancy
+    domain: binary_sensor
+  condition: []
+  action:
+  - if:
+    - condition: time
+      after: '21:00:00'
+      before: 06:00:00
+      weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+      - sat
+      - sun
+    then:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.kuche_night_relax
+      metadata: {}
+    else:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.kuche_day_relax_orange
+      metadata: {}
+  mode: single
+- id: '1654190655657'
+  alias: Küche - HUE MOTION Sensor  > V1 (Move Scence + Timeout Scene)
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - binary_sensor.kuche_hue_motion_sensor_occupancy
+    from: 'off'
+    to: 'on'
+  condition:
+  - type: is_illuminance
+    condition: device
+    device_id: 7142a106adeea865ace8659ead25393b
+    entity_id: sensor.kuche_hue_motion_sensor_illuminance_lux
+    domain: sensor
+    above: 0
+    below: 100
+    enabled: false
+  action:
+  - service: scene.turn_on
+    target:
+      entity_id: scene.kuche_day_relax_orange
+    metadata: {}
+  - wait_for_trigger:
+    - platform: state
+      entity_id:
+      - binary_sensor.kuche_hue_motion_sensor_occupancy
+      from: 'on'
+      to: 'off'
+  - service: scene.turn_on
+    target:
+      entity_id: scene.kuche_night_relax
+    metadata: {}
+  mode: single
+- id: '1654192942850'
+  alias: Küche Motion Sensor (Vorlage ohne Illumination)
+  description: ''
+  use_blueprint:
+    path: homeassistant/motion_light.yaml
+    input:
+      motion_entity: binary_sensor.kuche_hue_motion_sensor_occupancy
+      light_target:
+        device_id:
+        - 308af6f8058bee0f3fd5f93f0bd53008
+        - cea3423730ed7cf992754a13dfde34d1
+      no_motion_wait: 3
+- id: '1654195713842'
+  alias: Küche - HUE MOTION Sensor V2 +
+  description: ''
+  use_blueprint:
+    path: dirkk1980/motion_controlled_scenes_enhanced.yaml
+    input:
+      motion_entity: binary_sensor.kuche_hue_motion_sensor_occupancy
+      lightsensor_entity: sensor.kuche_hue_motion_sensor_illuminance_lux
+      scene_morning: scene.kuche_day_relax_orange
+      time_scene_morning: 06:00:00
+      scene_day: scene.kuche_day_relax_orange
+      time_scene_day: '11:00:00'
+      scene_evening: scene.kuche_evening_red
+      time_scene_evening: '22:00:00'
+      scene_night: scene.kuche_night_relax
+      time_scene_night: '23:00:00'
+      no_motion_wait: 360
+      illuminace_level: 55
+      light_target:
+        device_id:
+        - cea3423730ed7cf992754a13dfde34d1
+        - 308af6f8058bee0f3fd5f93f0bd53008
+- id: '1654231878085'
+  alias: Salon - HUE MOTION Sensor V2 + (Sabine)
+  description: ''
+  use_blueprint:
+    path: dirkk1980/motion_controlled_scenes_enhanced.yaml
+    input:
+      motion_entity: binary_sensor.dach_hue_motion_sensor_sabine_occupancy
+      lightsensor_entity: sensor.dach_hue_motion_sensor_sabine_illuminance_lux
+      scene_morning: scene.salon_night_red
+      time_scene_morning: 07:00:00
+      scene_day: scene.none
+      time_scene_day: 08:00:00
+      scene_evening: scene.salon_night_red
+      time_scene_evening: '19:00:00'
+      scene_night: scene.salon_night_light
+      time_scene_night: '22:00:00'
+      no_motion_wait: 10
+      light_target:
+        area_id:
+        - dach
+- id: '1659897140950'
+  alias: Salon - HUE MOTION Sensor V2 + (Wolfgang)
+  description: ''
+  use_blueprint:
+    path: dirkk1980/motion_controlled_scenes_enhanced.yaml
+    input:
+      motion_entity: binary_sensor.dach_hue_motion_sensor_wolfgang_occupancy
+      lightsensor_entity: sensor.dach_hue_motion_sensor_wolfgang_illuminance_lux
+      scene_morning: scene.salon_night_red
+      time_scene_morning: 07:00:00
+      scene_day: scene.none
+      time_scene_day: 08:00:00
+      scene_evening: scene.salon_night_red
+      time_scene_evening: '19:00:00'
+      scene_night: scene.salon_night_light
+      time_scene_night: '22:00:00'
+      no_motion_wait: 10
+      light_target:
+        area_id:
+        - dach
+- id: '1663675942574'
+  alias: Espresso Machine ON
+  description: ''
+  trigger: []
+  condition:
+  - condition: device
+    type: is_off
+    device_id: 991c278113b44793a16e4326951fb96f
+    entity_id: switch.kuche_espresso_machines
+    domain: switch
+  action:
+  - type: turn_on
+    device_id: 991c278113b44793a16e4326951fb96f
+    entity_id: switch.kuche_espresso_machines
+    domain: switch
+  mode: single
+- id: 1676151796967_migrated
+  alias: Noah - Hue Dimmer 2 (Z2M 2.x)
+  description: Migrated to Z2M 2.x compatible blueprint
+  use_blueprint:
+    path: z2m_hue_dimmer/hue_dimmer_z2m.yaml
+    input:
+      controller: Noah - Hue Dimmer 2
+      base_topic: zigbee2mqtt
+      on_released:
+      - service: scene.turn_on
+        target:
+          entity_id: scene.noah_day_light
+        metadata: {}
+      on_held:
+      - service: scene.turn_on
+        target:
+          entity_id: scene.noah_day_light_bright
+        metadata: {}
+      off_released:
+      - service: light.turn_off
+        data: {}
+        target:
+          area_id: noah
+      off_held:
+      - type: turn_off
+        device_id: 19d25283090a60d4b2654fae752c6c2a
+        entity_id: light.noah_kommode
+        domain: light
+      - type: turn_off
+        device_id: c6b9c03a91f070e6a34c32e319e4750b
+        entity_id: light.noah_decke
+        domain: light
+      - device_id: b79c232f74253a796bc35c3dd0fbb740
+        domain: light
+        entity_id: light.noahs_nanoleaf_light_panels_5a_06_5
+        type: brightness_decrease
+      - device_id: b79c232f74253a796bc35c3dd0fbb740
+        domain: light
+        entity_id: light.noahs_nanoleaf_light_panels_5a_06_5
+        type: brightness_decrease
+      up_released:
+      - device_id: ce3e2ac549f6092c57629f0f670f9e5c
+        domain: light
+        entity_id: light.noah_1_play_rgb
+        type: brightness_increase
+      - device_id: 9985e6805be001706242942e260491a0
+        domain: light
+        entity_id: light.noah_2_play_rgb
+        type: brightness_increase
+      - device_id: c6b9c03a91f070e6a34c32e319e4750b
+        domain: light
+        entity_id: light.noah_decke
+        type: brightness_increase
+      - device_id: b79c232f74253a796bc35c3dd0fbb740
+        domain: light
+        entity_id: light.noahs_nanoleaf_light_panels_5a_06_5
+        type: brightness_increase
+      - device_id: d603f3ce01a674312d94b8dac1f8f941
+        domain: light
+        entity_id: light.noah_bodenlampe
+        type: brightness_increase
+      - device_id: 19d25283090a60d4b2654fae752c6c2a
+        domain: light
+        entity_id: light.noah_kommode
+        type: brightness_increase
+      up_held:
+      - service: scene.turn_on
+        target:
+          entity_id: scene.noah_effect_kosmos_duplizieren
+        metadata: {}
+      down_released:
+      - device_id: ce3e2ac549f6092c57629f0f670f9e5c
+        domain: light
+        entity_id: light.noah_1_play_rgb
+        type: brightness_decrease
+      - device_id: 9985e6805be001706242942e260491a0
+        domain: light
+        entity_id: light.noah_2_play_rgb
+        type: brightness_decrease
+      - device_id: c6b9c03a91f070e6a34c32e319e4750b
+        domain: light
+        entity_id: light.noah_decke
+        type: brightness_decrease
+      - device_id: b79c232f74253a796bc35c3dd0fbb740
+        domain: light
+        entity_id: light.noahs_nanoleaf_light_panels_5a_06_5
+        type: brightness_decrease
+      - device_id: d603f3ce01a674312d94b8dac1f8f941
+        domain: light
+        entity_id: light.noah_bodenlampe
+        type: brightness_decrease
+      - device_id: 19d25283090a60d4b2654fae752c6c2a
+        domain: light
+        entity_id: light.noah_kommode
+        type: brightness_decrease
+- id: '1676234796974'
+  alias: SalonTAG1_activate
+  description: ''
+  trigger:
+  - platform: event
+    event_type: SalonTAG1
+  condition:
+  - condition: device
+    type: is_off
+    device_id: 01ff594cd7aa73a98628aeafd6bac218
+    entity_id: light.salon_designlampe_1_hue_white
+    domain: light
+  action:
+  - service: scene.turn_on
+    target:
+      entity_id: scene.salon_workbright
+    metadata: {}
+  mode: single
+- id: '1676237732712'
+  alias: SalonTAG1_deactivate
+  description: ''
+  trigger:
+  - platform: event
+    event_type: SalonTAG1
+  condition:
+  - condition: device
+    type: is_on
+    device_id: 01ff594cd7aa73a98628aeafd6bac218
+    entity_id: light.salon_designlampe_1_hue_white
+    domain: light
+  action:
+  - type: turn_off
+    device_id: 01ff594cd7aa73a98628aeafd6bac218
+    entity_id: light.salon_designlampe_1_hue_white
+    domain: light
+  - type: turn_off
+    device_id: f0d83bf787df1e5555b8159e2de6d4a6
+    entity_id: light.salon_designlampe_2_hue_rgb
+    domain: light
+  - type: turn_off
+    device_id: 55c32bd739244e4e60381d7e08f7408a
+    entity_id: light.salon_designlampe_3_hue_rgb
+    domain: light
+  mode: single
+- id: '1703510874916'
+  alias: PrintDone <20W
+  description: ''
+  trigger:
+  - type: energy
+    platform: device
+    device_id: 430bd30fc273233875da05c8cb8627af
+    entity_id: e56b027d1a0cd8da4d96e53585ddd271
+    domain: sensor
+    above: 0
+    below: 20
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 0
+  condition:
+  - condition: time
+    after: 06:00:00
+    before: '22:00:00'
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+    - sat
+    - sun
+  action:
+  - service: scene.turn_on
+    target:
+      entity_id: scene.kuche_day_light_duplizieren
+    metadata: {}
+  mode: single
+- id: '1710188725659'
+  alias: Eingang_DoorSensors_ActivateScene
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: 2f606a53e5c3042a35bcd82f8275de6a
+    entity_id: f6ca09ce3dfb5eeeec230ecc56fb00f1
+    domain: binary_sensor
+  - type: opened
+    platform: device
+    device_id: d8e2b75ea931922d42fcf642e95c1c0d
+    entity_id: 0b8a410d2f85c9dcfebc3344b10ac877
+    domain: binary_sensor
+  condition:
+  - condition: time
+    after: '20:00:00'
+    before: 06:00:00
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+    - sat
+    - sun
+    enabled: true
+  action:
+  - type: turn_on
+    device_id: 7ade8c77cf2ad4bee3c88dcf0e8b458e
+    entity_id: 59b6d645ab8e201c68fa3c487942b13d
+    domain: switch
+  - service: scene.turn_on
+    metadata: {}
+    target:
+      entity_id: scene.werkstatt_work_light_gradient_sunflare
+  - wait_for_trigger:
+    - type: not_opened
+      platform: device
+      device_id: 2f606a53e5c3042a35bcd82f8275de6a
+      entity_id: f6ca09ce3dfb5eeeec230ecc56fb00f1
+      domain: binary_sensor
+    - type: not_opened
+      platform: device
+      device_id: d8e2b75ea931922d42fcf642e95c1c0d
+      entity_id: 0b8a410d2f85c9dcfebc3344b10ac877
+      domain: binary_sensor
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
+  - service: light.turn_off
+    metadata: {}
+    data:
+      transition: 60
+    target:
+      device_id: dbeffd1b0620169577e417f98c9a9fbe
+  - delay:
+      hours: 0
+      minutes: 1
+      seconds: 0
+      milliseconds: 0
+  - type: turn_off
+    device_id: 7ade8c77cf2ad4bee3c88dcf0e8b458e
+    entity_id: 59b6d645ab8e201c68fa3c487942b13d
+    domain: switch
+  mode: single
+- id: '1710191574792'
+  alias: Eingang2
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: 2f606a53e5c3042a35bcd82f8275de6a
+    entity_id: f6ca09ce3dfb5eeeec230ecc56fb00f1
+    domain: binary_sensor
+  - type: opened
+    platform: device
+    device_id: d8e2b75ea931922d42fcf642e95c1c0d
+    entity_id: 0b8a410d2f85c9dcfebc3344b10ac877
+    domain: binary_sensor
+  condition:
+  - condition: time
+    after: '20:00:00'
+    before: 06:00:00
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+    - sat
+    - sun
+    enabled: true
+  action:
+  - if:
+    - condition: and
+      conditions:
+      - type: is_not_open
+        condition: device
+        device_id: 2f606a53e5c3042a35bcd82f8275de6a
+        entity_id: f6ca09ce3dfb5eeeec230ecc56fb00f1
+        domain: binary_sensor
+      - type: is_not_open
+        condition: device
+        device_id: d8e2b75ea931922d42fcf642e95c1c0d
+        entity_id: 0b8a410d2f85c9dcfebc3344b10ac877
+        domain: binary_sensor
+    then:
+    - service: scene.turn_on
+      metadata: {}
+      target:
+        entity_id: scene.werkstatt_work_light_gradient_sunflare
+  - service: scene.turn_on
+    metadata: {}
+    target:
+      entity_id: scene.werkstatt_work_light
+  mode: single
+- id: '1712245720538'
+  alias: Werkstatt - IKEA STYRBAR Dimmer
+  description: ''
+  use_blueprint:
+    path: EPMatt/ikea_e2001_e2002.yaml
+    input:
+      integration: Zigbee2MQTT
+      action_button_up_release: []
+      action_button_down_release: []
+      action_button_right_release: []
+      helper_last_controller_event: input_text.werkstatt_ikea_stybar_dimmer
+      action_button_up_short:
+      - device_id: dbeffd1b0620169577e417f98c9a9fbe
+        domain: light
+        entity_id: f4db473c5a23faffeafb2ceefdb2ee48
+        type: brightness_increase
+      action_button_down_short:
+      - device_id: dbeffd1b0620169577e417f98c9a9fbe
+        domain: light
+        entity_id: f4db473c5a23faffeafb2ceefdb2ee48
+        type: brightness_decrease
+      action_button_left_short:
+      - device_id: dbeffd1b0620169577e417f98c9a9fbe
+        domain: select
+        entity_id: 429e4cb308f024953942d9a9e286f449
+        type: select_previous
+        cycle: true
+      action_button_right_short:
+      - device_id: dbeffd1b0620169577e417f98c9a9fbe
+        domain: select
+        entity_id: 429e4cb308f024953942d9a9e286f449
+        type: select_next
+      action_button_down_long:
+      - type: turn_off
+        device_id: dbeffd1b0620169577e417f98c9a9fbe
+        entity_id: f4db473c5a23faffeafb2ceefdb2ee48
+        domain: light
+      action_button_up_long:
+      - type: turn_on
+        device_id: dbeffd1b0620169577e417f98c9a9fbe
+        entity_id: f4db473c5a23faffeafb2ceefdb2ee48
+        domain: light
+      controller_entity: werk
+- id: '1712694534064'
+  alias: _Speichere Kilometerstand zu Tagesbeginn
+  description: ''
+  trigger:
+  - platform: time
+    at: 00:00:00
+  action:
+  - service: input_number.set_value
+    target:
+      entity_id: input_number.km_stand_zu_tagesbeginn
+    data:
+      value: '{{ states(''sensor.id_buzzzabo_odometer'') | float }}'
+- id: '1731934823354'
+  alias: Wolfgang - Mini Switch 01
+  description: ''
+  triggers:
+  - device_id: 169ab83462d577316702e85994998e3f
+    domain: mqtt
+    type: action
+    subtype: single
+    trigger: device
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: sun
+        after: sunrise
+        before: sunset
+      sequence:
+      - choose:
+        - conditions:
+          - condition: state
+            entity_id: light.wolfgang_hue_go_black
+            attribute: supported_features
+            state: ''
+          sequence:
+          - target:
+              entity_id: scene.scene_x
+            action: scene.turn_on
+            data: {}
+        - conditions:
+          - condition: state
+            entity_id: light.67b0a749dcdc79e7fc4be9c10aaaae83
+            state: 'on'
+          sequence:
+          - target:
+              entity_id: light.67b0a749dcdc79e7fc4be9c10aaaae83
+            action: light.turn_off
+            data: {}
+    default:
+    - choose:
+      - conditions:
+        - condition: state
+          entity_id: light.67b0a749dcdc79e7fc4be9c10aaaae83
+          state: 'off'
+        sequence:
+        - target:
+            entity_id: scene.scene_y
+          action: scene.turn_on
+          data: {}
+      - conditions:
+        - condition: state
+          entity_id: light.67b0a749dcdc79e7fc4be9c10aaaae83
+          state: 'on'
+        sequence:
+        - target:
+            entity_id: light.67b0a749dcdc79e7fc4be9c10aaaae83
+          action: light.turn_off
+          data: {}
+  mode: single
+- id: 1651952303530_new
+  alias: Sabine - Hue Dimmer Switch (Z2M 2.x)
+  description: Migrated to Z2M 2.x compatible blueprint
+  use_blueprint:
+    path: z2m_hue_dimmer/hue_dimmer_z2m.yaml
+    input:
+      controller: Sabine - HUE DIMMER
+      base_topic: zigbee2mqtt
+      on_released:
+      - service: scene.turn_on
+        target:
+          entity_id: scene.sabine_relax_now
+      on_held:
+      - service: scene.turn_on
+        target:
+          entity_id: scene.sabine_daylight
+      off_released:
+      - service: light.turn_off
+        target:
+          area_id: 1_og_homeoffice
+      off_held:
+      - service: scene.turn_on
+        target:
+          entity_id: scene.sabine_relax_more
+      up_released:
+      - device_id: 6e749023075302e6e8f096876b3c3711
+        domain: light
+        entity_id: light.sabine_desk_up_play_rgb
+        type: brightness_increase
+      - device_id: 6d49de7d5feafaf4652bf5e1e7127493
+        domain: light
+        entity_id: light.sabine_desk_down_play_rgb
+        type: brightness_increase
+      - device_id: 4d2aa9cb491c62c18205f36d9e42a89f
+        domain: light
+        entity_id: light.sabine_regal_hue_rgb
+        type: brightness_increase
+      - device_id: 1bc21d6762e52d6e566faeb54469bb56
+        domain: light
+        entity_id: aaeb0215bca2e6e97288b54abcaef473
+        type: brightness_increase
+      down_released:
+      - device_id: 6e749023075302e6e8f096876b3c3711
+        domain: light
+        entity_id: light.sabine_desk_up_play_rgb
+        type: brightness_decrease
+      - device_id: 6d49de7d5feafaf4652bf5e1e7127493
+        domain: light
+        entity_id: light.sabine_desk_down_play_rgb
+        type: brightness_decrease
+      - device_id: 4d2aa9cb491c62c18205f36d9e42a89f
+        domain: light
+        entity_id: light.sabine_regal_hue_rgb
+        type: brightness_decrease
+      - device_id: 1bc21d6762e52d6e566faeb54469bb56
+        domain: light
+        entity_id: aaeb0215bca2e6e97288b54abcaef473
+        type: brightness_decrease
+- id: 1720367654743_v2_fixed
+  alias: Noah Dimmer V2 NEU (Z2M 2.x - V2 Events)
+  description: V2 mit Device Actions für einzelne Lampen (Light Group Fix)
+  use_blueprint:
+    path: z2m_hue_dimmer_v2/hue_dimmer_v2.yaml
+    input:
+      controller: Noah - Hue Dimmer NEU
+      base_topic: zigbee2mqtt
+      on_released:
+      - if:
+        - condition: time
+          after: '18:00:00'
+          before: 06:00:00
+          weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+          - sat
+          - sun
+        then:
+        - action: scene.turn_on
+          target:
+            entity_id: scene.noah_day_light
+        else:
+        - action: scene.turn_on
+          target:
+            entity_id: scene.noah_day_light_bright
+      on_held:
+      - action: scene.turn_on
+        target:
+          entity_id: scene.noah_day_light_bright
+      off_released:
+      - action: light.turn_off
+        target:
+          area_id: noah
+      off_held:
+      - action: scene.turn_on
+        target:
+          entity_id: scene.noah_night_light
+      up_released:
+      - device_id: d603f3ce01a674312d94b8dac1f8f941
+        domain: light
+        entity_id: light.noah_bodenlampe
+        type: brightness_increase
+      - device_id: ce3e2ac549f6092c57629f0f670f9e5c
+        domain: light
+        entity_id: light.noah_1_play_rgb
+        type: brightness_increase
+      - device_id: 9985e6805be001706242942e260491a0
+        domain: light
+        entity_id: light.noah_2_play_rgb
+        type: brightness_increase
+      - device_id: c6b9c03a91f070e6a34c32e319e4750b
+        domain: light
+        entity_id: light.noah_decke
+        type: brightness_increase
+      - device_id: 5de2436eeca2b33ec8a192b57667e12c
+        domain: light
+        entity_id: light.noah_kommode_hue_rgb
+        type: brightness_increase
+      down_released:
+      - device_id: d603f3ce01a674312d94b8dac1f8f941
+        domain: light
+        entity_id: light.noah_bodenlampe
+        type: brightness_decrease
+      - device_id: ce3e2ac549f6092c57629f0f670f9e5c
+        domain: light
+        entity_id: light.noah_1_play_rgb
+        type: brightness_decrease
+      - device_id: 9985e6805be001706242942e260491a0
+        domain: light
+        entity_id: light.noah_2_play_rgb
+        type: brightness_decrease
+      - device_id: c6b9c03a91f070e6a34c32e319e4750b
+        domain: light
+        entity_id: light.noah_decke
+        type: brightness_decrease
+      - device_id: 5de2436eeca2b33ec8a192b57667e12c
+        domain: light
+        entity_id: light.noah_kommode_hue_rgb
+        type: brightness_decrease
+      up_held: []
+      down_held: []
+- id: '1651944919324'
+  alias: Salon - Hue Tap Switch (Z2M 2.x MQTT)
+  description: Migriert zu Z2M 2.x MQTT Device Triggers
+  trigger:
+  - platform: mqtt
+    topic: zigbee2mqtt/Dach - SWITCH - HUE TAB
+  condition:
+  - condition: template
+    value_template: '{{ ''action'' in trigger.payload_json }}'
+  action:
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.payload_json.action == ''button_1_press_release''
+          }}'
+      sequence:
+      - service: light.toggle
+        target:
+          area_id: dach
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.payload_json.action == ''button_2_press_release''
+          }}'
+      sequence:
+      - service: scene.turn_on
+        target:
+          entity_id: scene.salon_workbright
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.payload_json.action == ''button_3_press_release''
+          }}'
+      sequence:
+      - service: scene.turn_on
+        target:
+          entity_id: scene.salon_daybright_duplizieren
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.payload_json.action == ''button_4_press_release''
+          }}'
+      sequence:
+      - service: scene.turn_on
+        target:
+          entity_id: scene.salon_night_red
+  mode: single
+- id: '1704196729647'
+  alias: Bad Black Hue Tap Dial Switch (Z2M 2.x MQTT)
+  description: Migriert zu Z2M 2.x MQTT Device Triggers
+  trigger:
+  - platform: mqtt
+    topic: zigbee2mqtt/Bad Hue Tap Dial Switch Black
+  condition:
+  - condition: template
+    value_template: '{{ ''action'' in trigger.payload_json }}'
+  action:
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.payload_json.action == ''dial_rotate_left_fast''
+          }}'
+      sequence:
+      - service: light.turn_off
+        target:
+          area_id: 2_bad
+        data:
+          transition: 1
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.payload_json.action == ''dial_rotate_right_fast''
+          }}'
+      sequence:
+      - service: light.turn_on
+        target:
+          area_id: 2_bad
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.payload_json.action == ''button_4_hold'' }}'
+      sequence:
+      - service: light.turn_off
+        target:
+          area_id: 2_bad
+        data:
+          transition: 1
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.payload_json.action == ''button_2_hold'' }}'
+      sequence:
+      - service: light.turn_off
+        target:
+          area_id: 2_bad
+        data:
+          transition: 1
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.payload_json.action == ''button_1_hold'' }}'
+      sequence:
+      - service: light.turn_off
+        target:
+          area_id: 2_bad
+        data:
+          transition: 1
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.payload_json.action == ''button_1_press_release''
+          }}'
+      sequence:
+      - service: scene.turn_on
+        target:
+          entity_id: scene.bad_night_light
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.payload_json.action in [''dial_rotate_left_slow'',
+          ''dial_rotate_left_step''] }}'
+      sequence:
+      - device_id: 121c4b220a256672c507c6de049c8a7a
+        domain: light
+        entity_id: 0379d19d738a12211d318e9350ac2fa9
+        type: brightness_decrease
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.payload_json.action in [''dial_rotate_right_slow'',
+          ''dial_rotate_right_step''] }}'
+      sequence:
+      - device_id: 121c4b220a256672c507c6de049c8a7a
+        domain: light
+        entity_id: 0379d19d738a12211d318e9350ac2fa9
+        type: brightness_increase
+  mode: single
+- id: '1651870296527'
+  alias: _My Magic Cube Automations (Z2M 2.x MQTT)
+  description: Migriert zu Z2M 2.x MQTT Device Triggers
+  trigger:
+  - platform: mqtt
+    topic: zigbee2mqtt/Aqara Cube
+  condition:
+  - condition: template
+    value_template: '{{ ''action'' in trigger.payload_json }}'
+  action:
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.payload_json.action == ''rotate_right'' }}'
+      sequence:
+      - device_id: 2dc7a4a7aa6e1537ce6730b84c46feda
+        domain: mobile_app
+        type: notify
+        message: 'Rechts gedreht '
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.payload_json.action == ''rotate_left'' }}'
+      sequence:
+      - device_id: 2dc7a4a7aa6e1537ce6730b84c46feda
+        domain: mobile_app
+        type: notify
+        message: links
+    - conditions:
+      - condition: template
+        value_template: '{{ trigger.payload_json.action == ''slide'' }}'
+      sequence:
+      - device_id: 2dc7a4a7aa6e1537ce6730b84c46feda
+        domain: mobile_app
+        type: notify
+        message: test
+  mode: single

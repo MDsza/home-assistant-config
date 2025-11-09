@@ -1,0 +1,7644 @@
+- id: '1651942353357'
+  name: Salon - DayBright
+  entities:
+    light.salon_designlampe_1_hue_white:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 250
+      linkquality: 65
+      update:
+        state:
+      update_available:
+      friendly_name: Salon Designlampe_1 - HUE WHITE
+      supported_features: 45
+      state: 'on'
+    light.salon_designlampe_2_hue_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 15.178
+      - 99.216
+      rgb_color:
+      - 255
+      - 66
+      - 2
+      xy_color:
+      - 0.677
+      - 0.319
+      color:
+        x: 0.677
+        y: 0.319
+      linkquality: 47
+      update:
+        state:
+      update_available:
+      friendly_name: Salon Designlampe_2 - HUE RGB
+      supported_features: 63
+      state: 'on'
+    light.salon_designlampe_3_hue_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 29.589
+      - 28.627
+      rgb_color:
+      - 255
+      - 218
+      - 182
+      xy_color:
+      - 0.397
+      - 0.363
+      color:
+        x: 0.397
+        y: 0.363
+      linkquality: 32
+      update:
+        state:
+      update_available:
+      friendly_name: Salon Designlampe_3 - HUE RGB
+      supported_features: 63
+      state: 'on'
+    light.salon_nightlight_hue_white_e14:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      friendly_name: Salon NightLight - HUE WHITE E14
+      supported_features: 45
+      linkquality: 61
+      update:
+        state:
+      color_mode: brightness
+      brightness: 255
+      state: 'on'
+  icon: mdi:floor-lamp-outline
+- id: '1651945063528'
+  name: Salon - Relax Orange
+  entities:
+    light.salon_designlampe_1_hue_white:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      linkquality: 80
+      update:
+        state:
+      update_available:
+      friendly_name: Salon Designlampe_1 - HUE WHITE
+      supported_features: 45
+      color_mode: brightness
+      brightness: 3
+      state: 'on'
+    light.salon_designlampe_2_hue_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color:
+        x: 0.677
+        y: 0.319
+      linkquality: 72
+      update:
+        state:
+      update_available:
+      friendly_name: Salon Designlampe_2 - HUE RGB
+      supported_features: 63
+      color_mode: xy
+      brightness: 41
+      hs_color:
+      - 15.178
+      - 99.216
+      rgb_color:
+      - 255
+      - 66
+      - 2
+      xy_color:
+      - 0.677
+      - 0.319
+      state: 'on'
+    light.salon_designlampe_3_hue_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color:
+        x: 0.701
+        y: 0.299
+      linkquality: 65
+      update:
+        state:
+      update_available:
+      friendly_name: Salon Designlampe_3 - HUE RGB
+      supported_features: 63
+      color_mode: xy
+      brightness: 3
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      state: 'on'
+    light.salon_nightlight_hue_white_e14:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      linkquality: 43
+      update:
+        state: idle
+      update_available:
+      friendly_name: Salon NightLight - HUE WHITE E14
+      supported_features: 45
+      color_mode: brightness
+      brightness: 3
+      state: 'on'
+  icon: mdi:floor-lamp-outline
+- id: '1651945278269'
+  name: Salon - Night Red
+  entities:
+    light.salon_nightlight_hue_white_e14:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 82
+      linkquality: 29
+      power_on_behavior:
+      update:
+        installed_version: 16785162
+        latest_version: 16785162
+        state: idle
+      update_available:
+      friendly_name: Salon NightLight - HUE WHITE E14
+      supported_features: 44
+      state: 'on'
+  icon: mdi:floor-lamp-outline
+  metadata: {}
+- id: '1651951876600'
+  name: Sabine - DayLight
+  entities:
+    light.sabine_desk_up_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 211
+      color_temp_kelvin: 2570
+      color_temp: 389
+      hs_color:
+      - 28.696
+      - 70.045
+      rgb_color:
+      - 255
+      - 161
+      - 76
+      xy_color:
+      - 0.54
+      - 0.388
+      color:
+        x: 0.4708
+        y: 0.4127
+      linkquality: 76
+      power_on_behavior:
+      update:
+        installed_version: 16786434
+        latest_version: 16786434
+        state: idle
+      update_available:
+      friendly_name: Sabine Desk_UP - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.sabine_desk_down_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 193
+      color_temp_kelvin: 2754
+      color_temp: 363
+      hs_color:
+      - 28.281
+      - 64.025
+      rgb_color:
+      - 255
+      - 168
+      - 91
+      xy_color:
+      - 0.521
+      - 0.387
+      color:
+        x: 0.4558
+        y: 0.4096
+      linkquality: 61
+      power_on_behavior:
+      update:
+        installed_version: 16785666
+        latest_version: 16785666
+        state: idle
+      update_available:
+      friendly_name: Sabine Desk_DOWN - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.sabine_regal_hue_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 200
+      color_temp_kelvin: 2801
+      color_temp: 357
+      hs_color:
+      - 28.185
+      - 62.588
+      rgb_color:
+      - 255
+      - 170
+      - 95
+      xy_color:
+      - 0.516
+      - 0.386
+      color:
+        x: 0.4519
+        y: 0.4086
+      linkquality: 80
+      power_on_behavior:
+      update:
+        installed_version: 16785162
+        latest_version: 16785162
+        state: idle
+      update_available:
+      friendly_name: Sabine Regal - HUE RGB
+      supported_features: 44
+      state: 'on'
+    light.0x001788010d17f643:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      friendly_name: Sabine - Decke Infuse M
+      supported_features: 44
+      linkquality: 91
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      color_mode: color_temp
+      brightness: 148
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      color:
+        x: 0.5267
+        y: 0.4133
+      state: 'on'
+  icon: mdi:weather-sunny
+  metadata: {}
+- id: '1651951927485'
+  name: Sabine - Work  now
+  entities:
+    light.sabine_desk_up_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 211
+      color_temp_kelvin: 2570
+      color_temp: 389
+      hs_color:
+      - 28.696
+      - 70.045
+      rgb_color:
+      - 255
+      - 161
+      - 76
+      xy_color:
+      - 0.54
+      - 0.388
+      color:
+        x: 0.4708
+        y: 0.4127
+      linkquality: 72
+      power_on_behavior:
+      update:
+        installed_version: 16786434
+        latest_version: 16786434
+        state: idle
+      update_available:
+      friendly_name: Sabine Desk_UP - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.sabine_desk_down_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 193
+      color_temp_kelvin: 2754
+      color_temp: 363
+      hs_color:
+      - 28.281
+      - 64.025
+      rgb_color:
+      - 255
+      - 168
+      - 91
+      xy_color:
+      - 0.521
+      - 0.387
+      color:
+        x: 0.4558
+        y: 0.4096
+      linkquality: 65
+      power_on_behavior:
+      update:
+        installed_version: 16785666
+        latest_version: 16785666
+        state: idle
+      update_available:
+      friendly_name: Sabine Desk_DOWN - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.sabine_regal_hue_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 200
+      color_temp_kelvin: 2801
+      color_temp: 357
+      hs_color:
+      - 28.185
+      - 62.588
+      rgb_color:
+      - 255
+      - 170
+      - 95
+      xy_color:
+      - 0.516
+      - 0.386
+      color:
+        x: 0.4519
+        y: 0.4086
+      linkquality: 72
+      power_on_behavior:
+      update:
+        installed_version: 16785162
+        latest_version: 16785162
+        state: idle
+      update_available:
+      friendly_name: Sabine Regal - HUE RGB
+      supported_features: 44
+      state: 'on'
+    light.0x001788010d17f643:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      friendly_name: Sabine - Decke Infuse M
+      supported_features: 44
+      linkquality: 61
+      update:
+        installed_version: -1
+        latest_version: -1
+        state:
+      color_mode: xy
+      brightness: 87
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 36.102
+      - 46.275
+      rgb_color:
+      - 255
+      - 208
+      - 137
+      xy_color:
+      - 0.443
+      - 0.396
+      color:
+        x: 0.443
+        y: 0.396
+      state: 'on'
+  icon: mdi:weather-sunny
+  metadata: {}
+- id: '1651951962181'
+  name: Sabine - Relax more
+  entities:
+    light.sabine_desk_up_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 193
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 19.381
+      - 88.627
+      rgb_color:
+      - 255
+      - 102
+      - 29
+      xy_color:
+      - 0.638
+      - 0.344
+      color:
+        x: 0.638
+        y: 0.344
+      linkquality: 72
+      power_on_behavior:
+      update:
+        installed_version: 16786434
+        latest_version: 16786434
+        state: idle
+      update_available:
+      friendly_name: Sabine Desk_UP - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.sabine_desk_down_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 120
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 28.584
+      - 91.373
+      rgb_color:
+      - 255
+      - 133
+      - 22
+      xy_color:
+      - 0.603
+      - 0.377
+      color:
+        x: 0.603
+        y: 0.377
+      linkquality: 61
+      power_on_behavior:
+      update:
+        installed_version: 16785666
+        latest_version: 16785666
+        state: idle
+      update_available:
+      friendly_name: Sabine Desk_DOWN - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.sabine_regal_hue_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 84
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 17.438
+      - 79.608
+      rgb_color:
+      - 255
+      - 111
+      - 52
+      xy_color:
+      - 0.618
+      - 0.345
+      color:
+        x: 0.618
+        y: 0.345
+      linkquality: 98
+      power_on_behavior:
+      update:
+        installed_version: 16785162
+        latest_version: 16785162
+        state: idle
+      update_available:
+      friendly_name: Sabine Regal - HUE RGB
+      supported_features: 44
+      state: 'on'
+    light.0x001788010d17f643:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      friendly_name: Sabine - Decke Infuse M
+      supported_features: 44
+      linkquality: 91
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      color_mode: xy
+      brightness: 38
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 19.574
+      - 55.294
+      rgb_color:
+      - 255
+      - 160
+      - 114
+      xy_color:
+      - 0.512
+      - 0.36
+      color:
+        x: 0.512
+        y: 0.36
+      state: 'on'
+  icon: mdi:weather-sunny
+  metadata: {}
+- id: '1651952020006'
+  name: Sabine - Night Red
+  entities:
+    light.sabine_desk_up_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 59
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 344.409
+      - 99.608
+      rgb_color:
+      - 255
+      - 1
+      - 67
+      xy_color:
+      - 0.667
+      - 0.284
+      color:
+        x: 0.667
+        y: 0.284
+      linkquality: 72
+      power_on_behavior:
+      update:
+        installed_version: 16786434
+        latest_version: 16786434
+        state: idle
+      update_available:
+      friendly_name: Sabine Desk_UP - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.sabine_desk_down_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 61
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 314.824
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 192
+      xy_color:
+      - 0.477
+      - 0.196
+      color:
+        x: 0.477
+        y: 0.196
+      linkquality: 58
+      power_on_behavior:
+      update:
+        installed_version: 16785666
+        latest_version: 16785666
+        state: idle
+      update_available:
+      friendly_name: Sabine Desk_DOWN - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.sabine_regal_hue_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 3
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 4
+      - 100
+      rgb_color:
+      - 255
+      - 17
+      - 0
+      xy_color:
+      - 0.699
+      - 0.301
+      color:
+        x: 0.699
+        y: 0.301
+      linkquality: 123
+      power_on_behavior:
+      update:
+        installed_version: 16785162
+        latest_version: 16785162
+        state: idle
+      update_available:
+      friendly_name: Sabine Regal - HUE RGB
+      supported_features: 44
+      state: 'on'
+    light.0x001788010d17f643:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      friendly_name: Sabine - Decke Infuse M
+      supported_features: 44
+      linkquality: 127
+      update:
+        installed_version: -1
+        latest_version: -1
+        state:
+      color_mode: xy
+      brightness: 3
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 17.48
+      - 99.608
+      rgb_color:
+      - 255
+      - 75
+      - 1
+      xy_color:
+      - 0.67
+      - 0.325
+      color:
+        x: 0.67
+        y: 0.325
+      state: 'on'
+  icon: mdi:weather-sunny
+  metadata: {}
+- id: '1651957149768'
+  name: Salon - Night LIGHT
+  entities:
+    light.salon_nightlight_hue_white_e14:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 3
+      linkquality: 29
+      power_on_behavior:
+      update:
+        installed_version: 16785162
+        latest_version: 16785162
+        state: idle
+      update_available:
+      friendly_name: Salon NightLight - HUE WHITE E14
+      supported_features: 44
+      state: 'on'
+  icon: mdi:floor-lamp-outline
+  metadata: {}
+- id: '1651963315537'
+  name: Wolf - Night Red
+  entities:
+    light.wolfgang_desk_1_left_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 76
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 15.278
+      - 84.706
+      rgb_color:
+      - 255
+      - 94
+      - 39
+      xy_color:
+      - 0.643
+      - 0.334
+      effect:
+      color:
+        x: 0.643
+        y: 0.334
+      linkquality: 58
+      power_on_behavior:
+      update:
+        installed_version: 16785666
+        latest_version: 16785666
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-1_Left - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.wolfgang_desk_1_right_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 76
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 15.278
+      - 84.706
+      rgb_color:
+      - 255
+      - 94
+      - 39
+      xy_color:
+      - 0.643
+      - 0.334
+      effect:
+      color:
+        x: 0.643
+        y: 0.334
+      linkquality: 87
+      power_on_behavior:
+      update:
+        installed_version: 16785666
+        latest_version: 16785666
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-1_Right - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.wolfgang_desk_1_top_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 43
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 14.667
+      - 70.588
+      rgb_color:
+      - 255
+      - 119
+      - 75
+      xy_color:
+      - 0.592
+      - 0.343
+      effect:
+      color:
+        h: 7
+        hue: 7
+        s: 94
+        saturation: 94
+        x: 0.592
+        y: 0.343
+      linkquality: 65
+      power_on_behavior:
+      update:
+        installed_version: 16785666
+        latest_version: 16785666
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-1_Top - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.wolfgang_desk_2_top_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 26
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 15.278
+      - 84.706
+      rgb_color:
+      - 255
+      - 94
+      - 39
+      xy_color:
+      - 0.643
+      - 0.334
+      effect:
+      color:
+        x: 0.643
+        y: 0.334
+      linkquality: 87
+      power_on_behavior:
+      update:
+        installed_version: 16785666
+        latest_version: 16785666
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-2_TOP - PLAY RGB
+      supported_features: 44
+      state: 'on'
+  icon: mdi:weather-night
+  metadata: {}
+- id: '1652005014798'
+  name: Küche - SabinesColor
+  entities:
+    light.kuche_stehlampe_hue_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 40.292
+      - 53.725
+      rgb_color:
+      - 255
+      - 210
+      - 118
+      xy_color:
+      - 0.456
+      - 0.416
+      color:
+        h: 34
+        hue: 34
+        s: 82
+        saturation: 82
+        x: 0.456
+        y: 0.416
+      linkquality: 80
+      update:
+        state: available
+      update_available:
+      friendly_name: Küche Stehlampe - HUE RGB
+      supported_features: 63
+      state: 'on'
+  icon: mdi:book-heart-outline
+- id: '1652011721527'
+  name: Wolf - Day Light
+  entities:
+    light.wolfgang_desk_1_left_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 5291
+      color_temp: 189
+      hs_color:
+      - 27.423
+      - 15.428
+      rgb_color:
+      - 255
+      - 233
+      - 215
+      xy_color:
+      - 0.362
+      - 0.346
+      effect:
+      color:
+        x: 0.3374
+        y: 0.3453
+      linkquality: 36
+      power_on_behavior:
+      update:
+        installed_version: 16785666
+        latest_version: 16785666
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-1_Left - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.wolfgang_desk_1_right_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 5291
+      color_temp: 189
+      hs_color:
+      - 27.423
+      - 15.428
+      rgb_color:
+      - 255
+      - 233
+      - 215
+      xy_color:
+      - 0.362
+      - 0.346
+      effect:
+      color:
+        x: 0.3374
+        y: 0.3453
+      linkquality: 32
+      power_on_behavior:
+      update:
+        installed_version: 16785666
+        latest_version: 16785666
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-1_Right - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.wolfgang_desk_1_top_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 161
+      color_temp_kelvin: 5291
+      color_temp: 189
+      hs_color:
+      - 27.423
+      - 15.428
+      rgb_color:
+      - 255
+      - 233
+      - 215
+      xy_color:
+      - 0.362
+      - 0.346
+      effect:
+      color:
+        h: 49
+        hue: 49
+        s: 17
+        saturation: 17
+        x: 0.3374
+        y: 0.3453
+      linkquality: 87
+      power_on_behavior:
+      update:
+        installed_version: 16785666
+        latest_version: 16785666
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-1_Top - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.wolfgang_desk_2_top_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 5263
+      color_temp: 190
+      hs_color:
+      - 27.371
+      - 15.784
+      rgb_color:
+      - 255
+      - 233
+      - 214
+      xy_color:
+      - 0.362
+      - 0.347
+      effect:
+      color:
+        x: 0.3382
+        y: 0.3459
+      linkquality: 61
+      power_on_behavior:
+      update:
+        installed_version: 16785666
+        latest_version: 16785666
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-2_TOP - PLAY RGB
+      supported_features: 44
+      state: 'on'
+  icon: mdi:weather-night
+  metadata: {}
+- id: '1652012009605'
+  name: Wolf - Orange
+  entities:
+    light.wolfgang_desk_1_left_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 188
+      color_temp_kelvin: 2624
+      color_temp: 381
+      hs_color:
+      - 28.567
+      - 68.208
+      rgb_color:
+      - 255
+      - 163
+      - 81
+      xy_color:
+      - 0.534
+      - 0.387
+      effect:
+      color:
+        x: 0.4665
+        y: 0.412
+      linkquality: 43
+      power_on_behavior:
+      update:
+        installed_version: 16785666
+        latest_version: 16785666
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-1_Left - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.wolfgang_desk_1_right_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 188
+      color_temp_kelvin: 2624
+      color_temp: 381
+      hs_color:
+      - 28.567
+      - 68.208
+      rgb_color:
+      - 255
+      - 163
+      - 81
+      xy_color:
+      - 0.534
+      - 0.387
+      effect:
+      color:
+        x: 0.4665
+        y: 0.412
+      linkquality: 36
+      power_on_behavior:
+      update:
+        installed_version: 16785666
+        latest_version: 16785666
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-1_Right - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.wolfgang_desk_1_top_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 97
+      color_temp_kelvin: 2941
+      color_temp: 340
+      hs_color:
+      - 27.925
+      - 58.522
+      rgb_color:
+      - 255
+      - 175
+      - 105
+      xy_color:
+      - 0.502
+      - 0.384
+      effect:
+      color:
+        h: 34
+        hue: 34
+        s: 77
+        saturation: 77
+        x: 0.4413
+        y: 0.4055
+      linkquality: 83
+      power_on_behavior:
+      update:
+        installed_version: 16785666
+        latest_version: 16785666
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-1_Top - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.wolfgang_desk_2_top_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 188
+      color_temp_kelvin: 2624
+      color_temp: 381
+      hs_color:
+      - 28.567
+      - 68.208
+      rgb_color:
+      - 255
+      - 163
+      - 81
+      xy_color:
+      - 0.534
+      - 0.387
+      effect:
+      color:
+        x: 0.4665
+        y: 0.412
+      linkquality: 76
+      power_on_behavior:
+      update:
+        installed_version: 16785666
+        latest_version: 16785666
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-2_TOP - PLAY RGB
+      supported_features: 44
+      state: 'on'
+  icon: mdi:weather-night
+  metadata: {}
+- id: '1652017829767'
+  name: Noah - Day Light RELAXER
+  entities:
+    light.noah_1_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 71
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 28.471
+      - 100
+      rgb_color:
+      - 255
+      - 121
+      - 0
+      xy_color:
+      - 0.622
+      - 0.366
+      color:
+        x: 0.622
+        y: 0.366
+      linkquality: 102
+      power_on_behavior:
+      update:
+        installed_version: 16785412
+        latest_version: 16785412
+        state: idle
+      update_available:
+      friendly_name: Noah 1 - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.noah_2_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 115
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 34.353
+      - 100
+      rgb_color:
+      - 255
+      - 146
+      - 0
+      xy_color:
+      - 0.589
+      - 0.394
+      color:
+        x: 0.589
+        y: 0.394
+      linkquality: 120
+      power_on_behavior:
+      update:
+        installed_version: 16785412
+        latest_version: 16785412
+        state: idle
+      update_available:
+      friendly_name: Noah 2 - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.noah_decke:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2557
+      color_temp: 391
+      hs_color:
+      - 28.728
+      - 70.496
+      rgb_color:
+      - 255
+      - 161
+      - 75
+      xy_color:
+      - 0.541
+      - 0.389
+      color:
+        x: 0.4726
+        y: 0.413
+      linkquality: 153
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      update_available:
+      friendly_name: Noah - Decke
+      supported_features: 44
+      state: 'on'
+    light.noahs_nanoleaf_light_panels_5a_06_5:
+      restored: true
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6493
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - Color Burst
+      - Flames
+      - Forest
+      - Inner Peace
+      - Nemo
+      - Northern Lights
+      - Romantic
+      - Snowfall
+      supported_color_modes:
+      - color_temp
+      - hs
+      friendly_name: Noahs Nanoleaf - Light Panels 5A:06:5
+      supported_features: 36
+      state: unavailable
+    light.noah_bodenlampe:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 153
+      linkquality: 76
+      power_on_behavior:
+      update:
+        installed_version: 16786948
+        latest_version: 16786948
+        state: idle
+      update_available:
+      friendly_name: Noah - Bodenlampe
+      supported_features: 44
+      state: 'on'
+    light.noah_kommode_hue_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 201
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 30.796
+      - 88.627
+      rgb_color:
+      - 255
+      - 145
+      - 29
+      xy_color:
+      - 0.586
+      - 0.389
+      color:
+        x: 0.586
+        y: 0.389
+      linkquality: 138
+      power_on_behavior:
+      update:
+        installed_version: 16785162
+        latest_version: 16785162
+        state: idle
+      update_available:
+      friendly_name: Noah Kommode - HUE RGB
+      supported_features: 44
+      state: 'on'
+  icon: mdi:sun-wireless-outline
+  metadata: {}
+- id: '1652020710357'
+  name: Wohnzimmer - Day Light
+  entities:
+    light.wohnzimmer_decke_hue_rgb_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 31.558
+      - 60.392
+      rgb_color:
+      - 255
+      - 182
+      - 101
+      xy_color:
+      - 0.4987
+      - 0.3969
+      color:
+        h: 23
+        hue: 23
+        s: 87
+        saturation: 87
+        x: 0.4987
+        y: 0.3969
+      linkquality: 142
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state:
+      update_available:
+      friendly_name: Wohnzimmer Decke - HUE RGB
+      supported_features: 44
+      state: 'on'
+    light.wohnzimmer_regal_hue_white_2:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 148
+      linkquality: 76
+      power_on_behavior:
+      update:
+        installed_version: 16786948
+        latest_version: 16786948
+        state: idle
+      update_available:
+      friendly_name: 'Wohnzimmer Regal - HUE WHITE '
+      supported_features: 44
+      state: 'on'
+    light.wohnzimmer_hue_go:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 125
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 23.81
+      - 74.118
+      rgb_color:
+      - 255
+      - 141
+      - 66
+      xy_color:
+      - 0.574
+      - 0.371
+      color:
+        x: 0.574
+        y: 0.371
+      linkquality: 21
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      update_available:
+      friendly_name: Wohnzimmer - Hue GO
+      supported_features: 44
+      state: 'on'
+    light.wohnzimmer_huebar:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - sunrise
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 112
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      friendly_name: Wohnzimmer HueBAR
+      supported_features: 44
+      color:
+        x: 0.5267
+        y: 0.4133
+      gradient:
+      - '#226bff'
+      - '#4166ff'
+      - '#ff9295'
+      - '#ff7a1e'
+      - '#ff851b'
+      linkquality: 43
+      power_on_behavior:
+      update:
+        installed_version: 16782340
+        latest_version: 16782340
+        state: idle
+      update_available:
+      state: 'on'
+    select.wohnzimmer_huebar_gradient_scene:
+      options:
+      - blossom
+      - crocus
+      - precious
+      - narcissa
+      - beginnings
+      - first_light
+      - horizon
+      - valley_dawn
+      - sunflare
+      - emerald_flutter
+      - memento
+      - resplendent
+      - scarlet_dream
+      - lovebirds
+      - smitten
+      - glitz_and_glam
+      - promise
+      - ruby_romance
+      - city_of_love
+      - honolulu
+      - savanna_sunset
+      - golden_pond
+      - runy_glow
+      - tropical_twilight
+      - miami
+      - cancun
+      - rio
+      - chinatown
+      - ibiza
+      - osaka
+      - tokyo
+      - motown
+      - fairfax
+      - galaxy
+      - starlight
+      - blood moon
+      - artic_aurora
+      - moonlight
+      - nebula
+      - sundown
+      - blue_lagoon
+      - palm_beach
+      - lake_placid
+      - mountain_breeze
+      - lake_mist
+      - ocean_dawn
+      - frosty_dawn
+      - sunday_morning
+      - emerald_isle
+      - spring_blossom
+      - midsummer_sun
+      - autumn_gold
+      - spring_lake
+      - winter_mountain
+      - midwinter
+      - amber_bloom
+      - lily
+      - painted_sky
+      - winter_beauty
+      - orange_fields
+      - forest_adventure
+      - blue_planet
+      - soho
+      - vapor_wave
+      - magneto
+      - tyrell
+      - disturbia
+      - hal
+      - golden_star
+      - under_the_tree
+      - silent_night
+      - rosy_sparkle
+      - festive_fun
+      - colour_burst
+      - crystalline
+      assumed_state: true
+      friendly_name: Wohnzimmer HueBAR Gradient scene
+      brightness: 112
+      color:
+        x: 0.5267
+        y: 0.4133
+      color_mode: color_temp
+      color_temp: 500
+      gradient:
+      - '#226bff'
+      - '#4166ff'
+      - '#ff9295'
+      - '#ff7a1e'
+      - '#ff851b'
+      linkquality: 43
+      power_on_behavior:
+      update:
+        installed_version: 16782340
+        latest_version: 16782340
+        state: idle
+      update_available:
+      state: unknown
+  icon: mdi:weather-sunny
+  metadata: {}
+- id: '1652023197082'
+  name: Küche - Day Light
+  entities:
+    light.kuche_stehlampe_hue_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 199
+      hs_color:
+      - 35.036
+      - 53.725
+      rgb_color:
+      - 255
+      - 198
+      - 118
+      xy_color:
+      - 0.468
+      - 0.401
+      color:
+        h: 28
+        hue: 28
+        s: 82
+        saturation: 82
+        x: 0.468
+        y: 0.401
+      color_temp_startup: 454
+      linkquality: 61
+      power_on_behavior:
+      update:
+        installed_version: 16785162
+        latest_version: 16785162
+        state: idle
+      update_available:
+      friendly_name: Küche Stehlampe - HUE RGB
+      supported_features: 44
+      state: 'on'
+    light.kuche_ikea_e14:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 4000
+      min_mireds: 250
+      max_mireds: 454
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 199
+      color_temp_kelvin: 2525
+      color_temp: 396
+      hs_color:
+      - 28.809
+      - 71.624
+      rgb_color:
+      - 255
+      - 160
+      - 72
+      xy_color:
+      - 0.544
+      - 0.389
+      linkquality: 32
+      power_on_behavior:
+      update:
+        installed_version: 587757105
+        latest_version: 587757105
+        state: idle
+      update_available:
+      friendly_name: Küche - Ikea E14
+      supported_features: 44
+      state: 'on'
+    select.kuche_ikea_e14_power_on_behavior:
+      options:
+      - 'off'
+      - 'on'
+      - toggle
+      - previous
+      brightness: 199
+      color_mode: color_temp
+      color_temp: 396
+      linkquality: 32
+      power_on_behavior:
+      update:
+        installed_version: 587757105
+        latest_version: 587757105
+        state: idle
+      update_available:
+      icon: mdi:power-settings
+      friendly_name: Küche - Ikea E14 power on behavior
+      state: unknown
+    light.kuche_tisch_links:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 99
+      hs_color:
+      - 30.159
+      - 74.118
+      rgb_color:
+      - 255
+      - 161
+      - 66
+      xy_color:
+      - 0.549
+      - 0.394
+      color:
+        h: 19
+        hue: 19
+        s: 95
+        saturation: 95
+        x: 0.549
+        y: 0.394
+      linkquality: 32
+      power_on_behavior:
+      update:
+        installed_version: 16785410
+        latest_version: 16785410
+        state: idle
+      update_available:
+      friendly_name: Küche - Tisch LINKS
+      supported_features: 44
+      state: 'on'
+    light.kuche_tisch_mitte:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 127
+      hs_color:
+      - 30.319
+      - 73.725
+      rgb_color:
+      - 255
+      - 162
+      - 67
+      xy_color:
+      - 0.547
+      - 0.394
+      color:
+        h: 19
+        hue: 19
+        s: 95
+        saturation: 95
+        x: 0.547
+        y: 0.394
+      linkquality: 87
+      power_on_behavior:
+      update:
+        installed_version: 16785410
+        latest_version: 16785410
+        state: idle
+      update_available:
+      friendly_name: Küche - Tisch MITTE
+      supported_features: 44
+      state: 'on'
+    light.kuche_tisch_rechts:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 125
+      hs_color:
+      - 30.319
+      - 73.725
+      rgb_color:
+      - 255
+      - 162
+      - 67
+      xy_color:
+      - 0.547
+      - 0.394
+      color:
+        h: 19
+        hue: 19
+        s: 95
+        saturation: 95
+        x: 0.547
+        y: 0.394
+      linkquality: 36
+      power_on_behavior:
+      update:
+        installed_version: 16785410
+        latest_version: 16785410
+        state: idle
+      update_available:
+      friendly_name: Küche - Tisch RECHTS
+      supported_features: 44
+      state: 'on'
+  icon: mdi:sun-compass
+  metadata: {}
+- id: '1652023251220'
+  name: Küche - Day Relax Orange
+  entities:
+    light.kuche_stehlampe_hue_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color:
+        h: 28
+        hue: 28
+        s: 82
+        saturation: 82
+        x: 0.468
+        y: 0.401
+      color_temp_startup: 454
+      linkquality: 80
+      power_on_behavior:
+      update:
+        installed_version: 16784918
+        latest_version: 16784918
+        state: idle
+      update_available:
+      friendly_name: Küche Stehlampe - HUE RGB
+      supported_features: 44
+      color_mode: xy
+      brightness: 200
+      hs_color:
+      - 35.036
+      - 53.725
+      rgb_color:
+      - 255
+      - 198
+      - 118
+      xy_color:
+      - 0.468
+      - 0.401
+      state: 'on'
+    light.kuche_ikea_e14:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 4000
+      min_mireds: 250
+      max_mireds: 454
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      linkquality: 94
+      power_on_behavior:
+      update:
+        installed_version: 587757105
+        latest_version: 587757105
+        state: idle
+      update_available:
+      friendly_name: Küche - Ikea E14
+      supported_features: 44
+      color_mode: color_temp
+      brightness: 200
+      color_temp_kelvin: 2525
+      color_temp: 396
+      hs_color:
+      - 28.809
+      - 71.624
+      rgb_color:
+      - 255
+      - 160
+      - 72
+      xy_color:
+      - 0.544
+      - 0.389
+      state: 'on'
+    select.kuche_ikea_e14_power_on_behavior:
+      options:
+      - 'off'
+      - 'on'
+      - toggle
+      - previous
+      brightness: 200
+      color_mode: color_temp
+      color_temp: 396
+      linkquality: 94
+      power_on_behavior:
+      update:
+        installed_version: 587757105
+        latest_version: 587757105
+        state: idle
+      update_available:
+      icon: mdi:power-settings
+      friendly_name: Küche - Ikea E14 power on behavior
+      state: unknown
+  icon: mdi:sun-compass
+  metadata: {}
+- id: '1652023292658'
+  name: Küche - Night Red
+  entities:
+    light.kuche_stehlampe_hue_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color:
+        h: 7
+        hue: 7
+        s: 99
+        saturation: 99
+        x: 0.64
+        y: 0.345
+      color_temp_startup: 454
+      linkquality: 65
+      update:
+        state: available
+      update_available:
+      friendly_name: Küche Stehlampe - HUE RGB
+      supported_features: 63
+      color_mode: xy
+      brightness: 69
+      hs_color:
+      - 20.26
+      - 90.588
+      rgb_color:
+      - 255
+      - 102
+      - 24
+      xy_color:
+      - 0.64
+      - 0.345
+      state: 'on'
+    light.kuche_ikea_e14:
+      min_mireds: 250
+      max_mireds: 454
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      linkquality: 65
+      power_on_behavior:
+      update:
+        state: available
+      update_available:
+      friendly_name: Küche - Ikea E14
+      supported_features: 47
+      color_mode: color_temp
+      brightness: 5
+      color_temp: 454
+      hs_color:
+      - 29.79
+      - 84.553
+      rgb_color:
+      - 255
+      - 146
+      - 39
+      xy_color:
+      - 0.579
+      - 0.388
+      state: 'on'
+    select.kuche_ikea_e14_power_on_behavior:
+      options:
+      - 'off'
+      - previous
+      - 'on'
+      brightness: 5
+      color_mode: color_temp
+      color_temp: 454
+      linkquality: 65
+      power_on_behavior:
+      update:
+        state: available
+      update_available:
+      icon: mdi:power-settings
+      friendly_name: Küche - Ikea E14 power on behavior
+      state: unknown
+  icon: mdi:sun-compass
+  metadata:
+    light.kuche_stehlampe_hue_rgb:
+      entity_only: false
+    light.kuche_ikea_e14:
+      entity_only: false
+    select.kuche_ikea_e14_power_on_behavior:
+      entity_only: false
+- id: '1653135246753'
+  name: Noah - Effect Kosmos
+  entities:
+    light.noah_1_play_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color:
+        x: 0.1572
+        y: 0.0504
+      linkquality: 87
+      update:
+        state: available
+      update_available:
+      friendly_name: Noah 1 - PLAY RGB
+      supported_features: 63
+      color_mode: xy
+      brightness: 157
+      hs_color:
+      - 254.508
+      - 95.686
+      rgb_color:
+      - 70
+      - 11
+      - 255
+      xy_color:
+      - 0.1572
+      - 0.0504
+      state: 'on'
+    light.noah_2_play_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color:
+        x: 0.3831
+        y: 0.1589
+      linkquality: 83
+      update:
+        state: available
+      update_available:
+      friendly_name: Noah 2 - PLAY RGB
+      supported_features: 63
+      color_mode: xy
+      brightness: 122
+      hs_color:
+      - 299.72
+      - 83.922
+      rgb_color:
+      - 254
+      - 41
+      - 255
+      xy_color:
+      - 0.3831
+      - 0.1589
+      state: 'on'
+    light.noah_nanoleaf_light_panel:
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - ' Rainbow'
+      - Aurora magic
+      - Be Productive
+      - Bedtime
+      - Color Burst
+      - Color Waves
+      - Cops
+      - Cosmos
+      - Disco Color
+      - Fireworks
+      - Flames
+      - Flow
+      - Forest
+      - Inner Peace
+      - Lightning
+      - Matrix
+      - Meteor Shower
+      - Morgen
+      - Netflix And Chill
+      - Northern Lights
+      - Ocean
+      - Paint Splatter
+      - Party
+      - Pulse Pop Beats
+      - Rainbow Wheel
+      - Rgb
+      - Rhythmic Northern Lights
+      - Ripple
+      - Sleep Mode
+      - Snowfall
+      - Sound Bar
+      - Starry Night
+      - Streaking Notes
+      - Sunset
+      - Try this before you skip it
+      - Zocken
+      - moonlight
+      supported_color_modes:
+      - color_temp
+      - hs
+      icon: mdi:triangle-outline
+      friendly_name: Noah - Nanoleaf Light Panel
+      supported_features: 36
+      color_mode: hs
+      brightness: 135
+      hs_color:
+      - 29
+      - 82
+      rgb_color:
+      - 255
+      - 146
+      - 45
+      xy_color:
+      - 0.576
+      - 0.386
+      effect: Cosmos
+      state: 'on'
+  icon: mdi:sun-wireless-outline
+- id: '1653135320779'
+  name: Noah - Effect Forest
+  entities:
+    light.noah_1_play_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 144
+      hs_color:
+      - 119.589
+      - 57.255
+      rgb_color:
+      - 110
+      - 255
+      - 109
+      xy_color:
+      - 0.23
+      - 0.588
+      color:
+        x: 0.23
+        y: 0.588
+      linkquality: 43
+      update:
+        state: available
+      update_available:
+      friendly_name: Noah 1 - PLAY RGB
+      supported_features: 63
+      state: 'on'
+    light.noah_2_play_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 185
+      hs_color:
+      - 108
+      - 50.98
+      rgb_color:
+      - 151
+      - 255
+      - 125
+      xy_color:
+      - 0.274
+      - 0.534
+      color:
+        x: 0.274
+        y: 0.534
+      linkquality: 87
+      update:
+        state: available
+      update_available:
+      friendly_name: Noah 2 - PLAY RGB
+      supported_features: 63
+      state: 'on'
+    light.noah_nanoleaf_light_panel:
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - ' Rainbow'
+      - Aurora magic
+      - Be Productive
+      - Bedtime
+      - Color Burst
+      - Color Waves
+      - Cops
+      - Cosmos
+      - Disco Color
+      - Fireworks
+      - Flames
+      - Flow
+      - Forest
+      - Inner Peace
+      - Lightning
+      - Matrix
+      - Meteor Shower
+      - Morgen
+      - Netflix And Chill
+      - Northern Lights
+      - Ocean
+      - Paint Splatter
+      - Party
+      - Pulse Pop Beats
+      - Rainbow Wheel
+      - Rgb
+      - Rhythmic Northern Lights
+      - Ripple
+      - Sleep Mode
+      - Snowfall
+      - Sound Bar
+      - Starry Night
+      - Streaking Notes
+      - Sunset
+      - Try this before you skip it
+      - Zocken
+      - moonlight
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 163
+      hs_color:
+      - 0
+      - 0
+      rgb_color:
+      - 255
+      - 255
+      - 255
+      xy_color:
+      - 0.323
+      - 0.329
+      effect: Forest
+      icon: mdi:triangle-outline
+      friendly_name: Noah - Nanoleaf Light Panel
+      supported_features: 36
+      state: 'on'
+  icon: mdi:sun-wireless-outline
+- id: '1654195799507'
+  name: Küche - Evening Orange
+  entities:
+    light.kuche_stehlampe_hue_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color:
+        h: 19
+        hue: 19
+        s: 100
+        saturation: 100
+        x: 0.577
+        y: 0.403
+      color_temp_startup: 454
+      linkquality: 65
+      update:
+        state: available
+      update_available:
+      friendly_name: Küche Stehlampe - HUE RGB
+      supported_features: 63
+      color_mode: xy
+      brightness: 154
+      hs_color:
+      - 35.904
+      - 97.647
+      rgb_color:
+      - 255
+      - 155
+      - 6
+      xy_color:
+      - 0.577
+      - 0.403
+      state: 'on'
+    light.kuche_ikea_e14:
+      min_mireds: 250
+      max_mireds: 454
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      linkquality: 61
+      power_on_behavior:
+      update:
+        state: available
+      update_available:
+      friendly_name: Küche - Ikea E14
+      supported_features: 47
+      color_mode: color_temp
+      brightness: 48
+      color_temp: 452
+      hs_color:
+      - 29.754
+      - 84.103
+      rgb_color:
+      - 255
+      - 146
+      - 40
+      xy_color:
+      - 0.579
+      - 0.387
+      state: 'on'
+    select.kuche_ikea_e14_power_on_behavior:
+      options:
+      - 'off'
+      - previous
+      - 'on'
+      brightness: 48
+      color_mode: color_temp
+      color_temp: 452
+      linkquality: 61
+      power_on_behavior:
+      update:
+        state: available
+      update_available:
+      icon: mdi:power-settings
+      friendly_name: Küche - Ikea E14 power on behavior
+      state: unknown
+  icon: mdi:sun-compass
+  metadata:
+    light.kuche_stehlampe_hue_rgb:
+      entity_only: false
+    light.kuche_ikea_e14:
+      entity_only: false
+    select.kuche_ikea_e14_power_on_behavior:
+      entity_only: false
+- id: '1654466291909'
+  name: Wolf - Relax
+  entities:
+    light.wolfgang_desk_1_left_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      color:
+        x: 0.5245
+        y: 0.4136
+      linkquality: 61
+      power_on_behavior:
+      update:
+        installed_version: 16785666
+        latest_version: 16785666
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-1_Left - PLAY RGB
+      supported_features: 44
+      state: 'off'
+    light.wolfgang_desk_1_right_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      color:
+        x: 0.5267
+        y: 0.4133
+      linkquality: 80
+      power_on_behavior:
+      update:
+        installed_version: 16785666
+        latest_version: 16785666
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-1_Right - PLAY RGB
+      supported_features: 44
+      state: 'off'
+    light.wolfgang_desk_1_top_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      color:
+        h: 25
+        hue: 25
+        s: 95
+        saturation: 95
+        x: 0.5267
+        y: 0.4133
+      linkquality: 72
+      power_on_behavior:
+      update:
+        installed_version: 16785666
+        latest_version: 16785666
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-1_Top - PLAY RGB
+      supported_features: 44
+      state: 'off'
+    light.wolfgang_desk_2_top_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      color:
+        x: 0.5202
+        y: 0.4142
+      linkquality: 87
+      power_on_behavior:
+      update:
+        installed_version: 16785666
+        latest_version: 16785666
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-2_TOP - PLAY RGB
+      supported_features: 44
+      state: 'off'
+  icon: mdi:weather-night
+  metadata: {}
+- id: '1654808963757'
+  name: Wolf - Blue-Orange
+  entities:
+    light.wolfgang_desk_1_left_play_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 82
+      hs_color:
+      - 30.119
+      - 99.216
+      rgb_color:
+      - 255
+      - 129
+      - 2
+      xy_color:
+      - 0.612
+      - 0.374
+      color:
+        x: 0.612
+        y: 0.374
+      linkquality: 43
+      update:
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-1_Left - PLAY RGB
+      supported_features: 63
+      state: 'on'
+    light.wolfgang_desk_1_right_play_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 82
+      hs_color:
+      - 30.119
+      - 99.216
+      rgb_color:
+      - 255
+      - 129
+      - 2
+      xy_color:
+      - 0.612
+      - 0.374
+      color:
+        x: 0.612
+        y: 0.374
+      linkquality: 7
+      update:
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-1_Right - PLAY RGB
+      supported_features: 63
+      state: 'on'
+    light.wolfgang_desk_1_top_play_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 43
+      hs_color:
+      - 242.588
+      - 100
+      rgb_color:
+      - 11
+      - 0
+      - 255
+      xy_color:
+      - 0.136
+      - 0.04
+      color:
+        h: 240
+        hue: 240
+        s: 100
+        saturation: 100
+        x: 0.136
+        y: 0.04
+      linkquality: 65
+      update:
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-1_Top - PLAY RGB
+      supported_features: 63
+      state: 'on'
+    light.wolfgang_desk_2_top_play_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 20
+      hs_color:
+      - 242.588
+      - 100
+      rgb_color:
+      - 11
+      - 0
+      - 255
+      xy_color:
+      - 0.136
+      - 0.04
+      color:
+        x: 0.136
+        y: 0.04
+      linkquality: 76
+      update:
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-2_TOP - PLAY RGB
+      supported_features: 63
+      state: 'on'
+  icon: mdi:weather-night
+  metadata:
+    light.wolfgang_desk_1_left_play_rgb:
+      entity_only: false
+    light.wolfgang_desk_1_right_play_rgb:
+      entity_only: false
+    light.wolfgang_desk_2_top_play_rgb:
+      entity_only: false
+    light.wolfgang_desk_1_top_play_rgb:
+      entity_only: false
+- id: '1654809231174'
+  name: Wolf - Dark Relax
+  entities:
+    light.wolfgang_desk_1_left_play_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 117
+      hs_color:
+      - 30.512
+      - 93.472
+      rgb_color:
+      - 255
+      - 137
+      - 16
+      xy_color:
+      - 0.597
+      - 0.383
+      color:
+        x: 0.5245
+        y: 0.4136
+      linkquality: 47
+      update:
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-1_Left - PLAY RGB
+      supported_features: 63
+      color_temp: 495
+      state: 'on'
+    light.wolfgang_desk_1_right_play_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 117
+      hs_color:
+      - 30.565
+      - 94.115
+      rgb_color:
+      - 255
+      - 137
+      - 15
+      xy_color:
+      - 0.597
+      - 0.383
+      color:
+        x: 0.5267
+        y: 0.4133
+      linkquality: 43
+      update:
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-1_Right - PLAY RGB
+      supported_features: 63
+      color_temp: 498
+      state: 'on'
+    light.wolfgang_desk_1_top_play_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 94
+      hs_color:
+      - 30.583
+      - 94.331
+      rgb_color:
+      - 255
+      - 137
+      - 14
+      xy_color:
+      - 0.598
+      - 0.383
+      color:
+        h: 25
+        hue: 25
+        s: 95
+        saturation: 95
+        x: 0.5267
+        y: 0.4133
+      linkquality: 65
+      update:
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-1_Top - PLAY RGB
+      supported_features: 63
+      color_temp: 499
+      state: 'on'
+    light.wolfgang_desk_2_top_play_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 31
+      hs_color:
+      - 30.336
+      - 91.331
+      rgb_color:
+      - 255
+      - 139
+      - 22
+      xy_color:
+      - 0.593
+      - 0.384
+      color:
+        x: 0.5202
+        y: 0.4142
+      linkquality: 80
+      update:
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-2_TOP - PLAY RGB
+      supported_features: 63
+      color_temp: 485
+      state: 'on'
+  icon: mdi:weather-night
+  metadata:
+    light.wolfgang_desk_1_left_play_rgb:
+      entity_only: false
+    light.wolfgang_desk_1_right_play_rgb:
+      entity_only: false
+    light.wolfgang_desk_2_top_play_rgb:
+      entity_only: false
+    light.wolfgang_desk_1_top_play_rgb:
+      entity_only: false
+- id: '1654897048079'
+  name: Wolf - Inv_Blue-Orange
+  entities:
+    light.wolfgang_desk_1_left_play_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 64
+      hs_color:
+      - 242.588
+      - 100
+      rgb_color:
+      - 11
+      - 0
+      - 255
+      xy_color:
+      - 0.136
+      - 0.04
+      color:
+        x: 0.136
+        y: 0.04
+      linkquality: 43
+      update:
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-1_Left - PLAY RGB
+      supported_features: 63
+      state: 'on'
+    light.wolfgang_desk_1_right_play_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 64
+      hs_color:
+      - 242.588
+      - 100
+      rgb_color:
+      - 11
+      - 0
+      - 255
+      xy_color:
+      - 0.136
+      - 0.04
+      color:
+        x: 0.136
+        y: 0.04
+      linkquality: 43
+      update:
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-1_Right - PLAY RGB
+      supported_features: 63
+      state: 'on'
+    light.wolfgang_desk_1_top_play_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 43
+      hs_color:
+      - 30.119
+      - 99.216
+      rgb_color:
+      - 255
+      - 129
+      - 2
+      xy_color:
+      - 0.612
+      - 0.374
+      color:
+        h: 13
+        hue: 13
+        s: 100
+        saturation: 100
+        x: 0.612
+        y: 0.374
+      linkquality: 65
+      update:
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-1_Top - PLAY RGB
+      supported_features: 63
+      state: 'on'
+    light.wolfgang_desk_2_top_play_rgb:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 43
+      hs_color:
+      - 30.119
+      - 99.216
+      rgb_color:
+      - 255
+      - 129
+      - 2
+      xy_color:
+      - 0.612
+      - 0.374
+      color:
+        x: 0.612
+        y: 0.374
+      linkquality: 76
+      update:
+        state: idle
+      update_available:
+      friendly_name: Wolfgang Desk-2_TOP - PLAY RGB
+      supported_features: 63
+      state: 'on'
+  icon: mdi:weather-night
+  metadata:
+    light.wolfgang_desk_1_left_play_rgb:
+      entity_only: false
+    light.wolfgang_desk_1_right_play_rgb:
+      entity_only: false
+    light.wolfgang_desk_2_top_play_rgb:
+      entity_only: false
+    light.wolfgang_desk_1_top_play_rgb:
+      entity_only: false
+- id: '1663432173799'
+  name: Küche - PRINTDone Light
+  entities:
+    light.kuche_stehlampe_hue_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 276.923
+      - 40.784
+      rgb_color:
+      - 215
+      - 151
+      - 255
+      xy_color:
+      - 0.313
+      - 0.21
+      effect:
+      color:
+        h: 273
+        hue: 273
+        s: 70
+        saturation: 70
+        x: 0.313
+        y: 0.21
+      color_temp_startup: 454
+      linkquality: 69
+      power_on_behavior:
+      update:
+        installed_version: 16785162
+        latest_version: 16785162
+        state: idle
+      update_available:
+      friendly_name: Küche Stehlampe - HUE RGB
+      supported_features: 44
+      state: 'on'
+    light.kuche_ikea_e14:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 4000
+      min_mireds: 250
+      max_mireds: 454
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2525
+      color_temp: 396
+      hs_color:
+      - 28.809
+      - 71.624
+      rgb_color:
+      - 255
+      - 160
+      - 72
+      xy_color:
+      - 0.544
+      - 0.389
+      effect:
+      color_options:
+      linkquality: 76
+      power_on_behavior:
+      update:
+        installed_version: 587757105
+        latest_version: 587757105
+        state: idle
+      update_available:
+      friendly_name: Küche - Ikea E14
+      supported_features: 44
+      state: 'on'
+    select.kuche_ikea_e14_power_on_behavior:
+      options:
+      - 'off'
+      - 'on'
+      - toggle
+      - previous
+      brightness: 254
+      color_mode: color_temp
+      color_options:
+      color_temp: 396
+      linkquality: 76
+      power_on_behavior:
+      update:
+        installed_version: 587757105
+        latest_version: 587757105
+        state: idle
+      update_available:
+      icon: mdi:power-settings
+      friendly_name: Küche - Ikea E14 Power-on behavior
+      state: unknown
+  icon: mdi:sun-compass
+  metadata: {}
+- id: '1663676061368'
+  name: Espresso ON
+  entities:
+    switch.smartplug03:
+      device_class: outlet
+      friendly_name: SmartPlug03
+      state: 'on'
+  metadata: {}
+  icon: mdi:coffee
+- id: '1667938188495'
+  name: Salon - WORKBright orange
+  entities:
+    light.salon_designlampe_1_hue_white:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      linkquality: 61
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state:
+      update_available:
+      friendly_name: Salon Designlampe_1 - HUE WHITE
+      supported_features: 44
+      color_mode: brightness
+      brightness: 79
+      state: 'on'
+    light.salon_designlampe_2_hue_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color:
+        x: 0.58
+        y: 0.38
+      linkquality: 80
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state:
+      update_available:
+      friendly_name: Salon Designlampe_2 - HUE RGB
+      supported_features: 44
+      color_mode: xy
+      brightness: 105
+      hs_color:
+      - 27.059
+      - 80
+      rgb_color:
+      - 255
+      - 143
+      - 51
+      xy_color:
+      - 0.58
+      - 0.38
+      state: 'on'
+    light.salon_designlampe_3_hue_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color:
+        x: 0.581
+        y: 0.388
+      linkquality: 54
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state:
+      update_available:
+      friendly_name: Salon Designlampe_3 - HUE RGB
+      supported_features: 44
+      color_mode: xy
+      brightness: 102
+      hs_color:
+      - 29.722
+      - 84.706
+      rgb_color:
+      - 255
+      - 146
+      - 39
+      xy_color:
+      - 0.581
+      - 0.388
+      state: 'on'
+    light.salon_nightlight_hue_white_e14:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      linkquality: 58
+      power_on_behavior:
+      update:
+        installed_version: 16784918
+        latest_version: 16784918
+        state: idle
+      update_available:
+      friendly_name: Salon NightLight - HUE WHITE E14
+      supported_features: 44
+      color_mode: brightness
+      brightness: 255
+      state: 'on'
+  icon: mdi:floor-lamp-outline
+  metadata: {}
+- id: '1670859863549'
+  name: Salon - WORKBright
+  entities:
+    light.salon_designlampe_1_hue_white:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      linkquality: 72
+      power_on_behavior:
+      update:
+        installed_version: 1.88.1
+        state:
+      update_available:
+      friendly_name: Salon Designlampe_1 - HUE WHITE
+      supported_features: 44
+      color_mode: brightness
+      brightness: 36
+      state: 'on'
+    light.salon_designlampe_2_hue_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color:
+        x: 0.43
+        y: 0.379
+      linkquality: 40
+      power_on_behavior:
+      update:
+        installed_version: 67.88.1
+        state:
+      update_available:
+      friendly_name: Salon Designlampe_2 - HUE RGB
+      supported_features: 44
+      color_mode: xy
+      brightness: 79
+      hs_color:
+      - 31.485
+      - 39.608
+      rgb_color:
+      - 255
+      - 207
+      - 154
+      xy_color:
+      - 0.43
+      - 0.379
+      state: 'on'
+    light.salon_designlampe_3_hue_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color:
+        x: 0.581
+        y: 0.388
+      linkquality: 54
+      power_on_behavior:
+      update:
+        installed_version: 67.88.1
+        state:
+      update_available:
+      friendly_name: Salon Designlampe_3 - HUE RGB
+      supported_features: 44
+      color_mode: xy
+      brightness: 28
+      hs_color:
+      - 29.722
+      - 84.706
+      rgb_color:
+      - 255
+      - 146
+      - 39
+      xy_color:
+      - 0.581
+      - 0.388
+      state: 'on'
+    light.salon_nightlight_hue_white_e14:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      linkquality: 58
+      power_on_behavior:
+      update:
+        installed_version: 1.93.11
+        state: idle
+      update_available:
+      friendly_name: Salon NightLight - HUE WHITE E14
+      supported_features: 44
+      color_mode: brightness
+      brightness: 255
+      state: 'on'
+  icon: mdi:floor-lamp-outline
+  metadata: {}
+- id: '1671642761683'
+  name: Salon - DayNotsSoBright
+  entities:
+    light.salon_designlampe_1_hue_white:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 69
+      linkquality: 54
+      power_on_behavior:
+      update:
+        installed_version: 1.88.1
+        state:
+      update_available:
+      friendly_name: Salon Designlampe_1 - HUE WHITE
+      supported_features: 44
+      state: 'on'
+    light.salon_designlampe_2_hue_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 188
+      hs_color:
+      - 44.941
+      - 100
+      rgb_color:
+      - 255
+      - 191
+      - 0
+      xy_color:
+      - 0.527
+      - 0.447
+      color:
+        x: 0.527
+        y: 0.447
+      linkquality: 51
+      power_on_behavior:
+      update:
+        installed_version: 67.88.1
+        state:
+      update_available:
+      friendly_name: Salon Designlampe_2 - HUE RGB
+      supported_features: 44
+      state: 'on'
+    light.salon_designlampe_3_hue_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 188
+      hs_color:
+      - 44.941
+      - 100
+      rgb_color:
+      - 255
+      - 191
+      - 0
+      xy_color:
+      - 0.527
+      - 0.447
+      color:
+        x: 0.527
+        y: 0.447
+      linkquality: 54
+      power_on_behavior:
+      update:
+        installed_version: 67.88.1
+        state:
+      update_available:
+      friendly_name: Salon Designlampe_3 - HUE RGB
+      supported_features: 44
+      state: 'on'
+    light.salon_nightlight_hue_white_e14:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 239
+      linkquality: 43
+      power_on_behavior:
+      update:
+        installed_version: 1.93.11
+        state: idle
+      update_available:
+      friendly_name: Salon NightLight - HUE WHITE E14
+      supported_features: 44
+      state: 'on'
+  icon: mdi:floor-lamp-outline
+  metadata: {}
+- id: '1675633970501'
+  name: Küche Tisch Relax Orange
+  entities:
+    light.kuche_tisch_links:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color:
+        h: 26
+        hue: 26
+        s: 94
+        saturation: 94
+        x: 0.5191
+        y: 0.4143
+      linkquality: 80
+      power_on_behavior:
+      update:
+        installed_version: 16785154
+        latest_version: 16785154
+        state: idle
+      update_available:
+      friendly_name: Küche - Tisch LINKS
+      supported_features: 44
+      color_mode: color_temp
+      brightness: 66
+      color_temp_kelvin: 2070
+      color_temp: 483
+      hs_color:
+      - 30.298
+      - 90.872
+      rgb_color:
+      - 255
+      - 140
+      - 23
+      xy_color:
+      - 0.592
+      - 0.385
+      state: 'on'
+    light.kuche_tisch_mitte:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color:
+        h: 26
+        hue: 26
+        s: 94
+        saturation: 94
+        x: 0.5191
+        y: 0.4143
+      linkquality: 72
+      power_on_behavior:
+      update:
+        installed_version: 16785154
+        latest_version: 16785154
+        state: idle
+      update_available:
+      friendly_name: Küche - Tisch MITTE
+      supported_features: 44
+      color_mode: color_temp
+      brightness: 31
+      color_temp_kelvin: 2079
+      color_temp: 481
+      hs_color:
+      - 30.261
+      - 90.417
+      rgb_color:
+      - 255
+      - 140
+      - 24
+      xy_color:
+      - 0.592
+      - 0.385
+      state: 'on'
+    light.kuche_tisch_rechts:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color:
+        h: 26
+        hue: 26
+        s: 93
+        saturation: 93
+        x: 0.517
+        y: 0.4145
+      linkquality: 98
+      power_on_behavior:
+      update:
+        installed_version: 16785154
+        latest_version: 16785154
+        state: idle
+      update_available:
+      friendly_name: Küche - Tisch RECHTS
+      supported_features: 44
+      color_mode: color_temp
+      brightness: 41
+      color_temp_kelvin: 2096
+      color_temp: 477
+      hs_color:
+      - 30.192
+      - 89.568
+      rgb_color:
+      - 255
+      - 141
+      - 26
+      xy_color:
+      - 0.59
+      - 0.386
+      state: 'on'
+  icon: mdi:table-furniture
+  metadata: {}
+- id: '1675634061660'
+  name: 'Küche NIGHT Light '
+  entities:
+    light.kuche_tisch_links:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color:
+        h: 247
+        hue: 247
+        s: 93
+        saturation: 93
+        x: 0.205
+        y: 0.1
+      linkquality: 80
+      power_on_behavior:
+      update:
+        installed_version: 16785154
+        latest_version: 16785154
+        state: idle
+      update_available:
+      friendly_name: Küche - Tisch LINKS
+      supported_features: 44
+      color_mode: xy
+      brightness: 26
+      hs_color:
+      - 254.831
+      - 69.804
+      rgb_color:
+      - 121
+      - 77
+      - 255
+      xy_color:
+      - 0.205
+      - 0.1
+      state: 'on'
+    light.kuche_tisch_mitte:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color:
+        h: 19
+        hue: 19
+        s: 93
+        saturation: 93
+        x: 0.54
+        y: 0.393
+      linkquality: 72
+      power_on_behavior:
+      update:
+        installed_version: 16785154
+        latest_version: 16785154
+        state: idle
+      update_available:
+      friendly_name: Küche - Tisch MITTE
+      supported_features: 44
+      color_mode: xy
+      brightness: 54
+      hs_color:
+      - 29.834
+      - 70.98
+      rgb_color:
+      - 255
+      - 164
+      - 74
+      xy_color:
+      - 0.54
+      - 0.393
+      state: 'on'
+    light.kuche_tisch_rechts:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color:
+        h: 7
+        hue: 7
+        s: 94
+        saturation: 94
+        x: 0.592
+        y: 0.343
+      linkquality: 98
+      power_on_behavior:
+      update:
+        installed_version: 16785154
+        latest_version: 16785154
+        state: idle
+      update_available:
+      friendly_name: Küche - Tisch RECHTS
+      supported_features: 44
+      color_mode: xy
+      brightness: 51
+      hs_color:
+      - 14.667
+      - 70.588
+      rgb_color:
+      - 255
+      - 119
+      - 75
+      xy_color:
+      - 0.592
+      - 0.343
+      state: 'on'
+  icon: mdi:table-furniture
+  metadata: {}
+- id: '1675634171802'
+  name: Küche Tisch DAY Light
+  entities:
+    light.kuche_tisch_mitte:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color:
+        h: 22
+        hue: 22
+        s: 85
+        saturation: 85
+        x: 0.491
+        y: 0.39
+      linkquality: 83
+      power_on_behavior:
+      update:
+        installed_version: 16785154
+        latest_version: 16785154
+        state: idle
+      update_available:
+      friendly_name: Küche - Tisch MITTE
+      supported_features: 44
+      color_mode: xy
+      brightness: 125
+      hs_color:
+      - 30.207
+      - 56.863
+      rgb_color:
+      - 255
+      - 183
+      - 110
+      xy_color:
+      - 0.491
+      - 0.39
+      state: 'on'
+    light.kuche_tisch_rechts:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color:
+        h: 22
+        hue: 22
+        s: 85
+        saturation: 85
+        x: 0.491
+        y: 0.39
+      linkquality: 98
+      power_on_behavior:
+      update:
+        installed_version: 16785154
+        latest_version: 16785154
+        state: idle
+      update_available:
+      friendly_name: Küche - Tisch RECHTS
+      supported_features: 44
+      color_mode: xy
+      brightness: 127
+      hs_color:
+      - 30.207
+      - 56.863
+      rgb_color:
+      - 255
+      - 183
+      - 110
+      xy_color:
+      - 0.491
+      - 0.39
+      state: 'on'
+    light.kuche_tisch_links:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color:
+        h: 22
+        hue: 22
+        s: 85
+        saturation: 85
+        x: 0.491
+        y: 0.39
+      linkquality: 76
+      power_on_behavior:
+      update:
+        installed_version: 16785154
+        latest_version: 16785154
+        state: idle
+      update_available:
+      friendly_name: Küche - Tisch LINKS
+      supported_features: 44
+      color_mode: xy
+      brightness: 107
+      hs_color:
+      - 30.207
+      - 56.863
+      rgb_color:
+      - 255
+      - 183
+      - 110
+      xy_color:
+      - 0.491
+      - 0.39
+      state: 'on'
+  icon: mdi:table-furniture
+  metadata: {}
+- id: '1691355899397'
+  name: Sabine - Relax Noah
+  entities:
+    light.sabine_desk_up_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 107
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 17.615
+      - 85.49
+      rgb_color:
+      - 255
+      - 101
+      - 37
+      xy_color:
+      - 0.636
+      - 0.341
+      effect:
+      color:
+        x: 0.636
+        y: 0.341
+      linkquality: 69
+      power_on_behavior:
+      update:
+        installed_version: 16786434
+        latest_version: 16786434
+        state: idle
+      update_available:
+      friendly_name: Sabine Desk_UP - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.sabine_desk_down_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 87
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 20.961
+      - 89.804
+      rgb_color:
+      - 255
+      - 106
+      - 26
+      xy_color:
+      - 0.635
+      - 0.348
+      effect:
+      color:
+        x: 0.635
+        y: 0.348
+      linkquality: 43
+      power_on_behavior:
+      update:
+        installed_version: 16785666
+        latest_version: 16785666
+        state: idle
+      update_available:
+      friendly_name: Sabine Desk_DOWN - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.sabine_regal_hue_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 69
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 26.949
+      - 92.549
+      rgb_color:
+      - 255
+      - 125
+      - 19
+      xy_color:
+      - 0.615
+      - 0.368
+      effect:
+      color:
+        x: 0.615
+        y: 0.368
+      linkquality: 47
+      power_on_behavior:
+      update:
+        installed_version: 16785162
+        latest_version: 16785162
+        state: idle
+      update_available:
+      friendly_name: Sabine Regal - HUE RGB
+      supported_features: 44
+      state: 'on'
+    light.sabine_decke_infuse_m:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 18
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      effect:
+      color:
+        x: 0.589
+        y: 0.329
+      color_temp_startup: 500
+      linkquality: 69
+      power_on_behavior: previous
+      update:
+        installed_version: 16784644
+        latest_version: 16784644
+        state: idle
+      update_available:
+      friendly_name: Sabine - Decke Infuse M
+      supported_features: 44
+      state: 'on'
+  icon: mdi:weather-sunny
+  metadata: {}
+- id: '1698598013656'
+  name: Küche Tisch DAY Lighter
+  entities:
+    light.kuche_tisch_mitte:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 157
+      hs_color:
+      - 30.207
+      - 56.863
+      rgb_color:
+      - 255
+      - 183
+      - 110
+      xy_color:
+      - 0.491
+      - 0.39
+      color:
+        h: 22
+        hue: 22
+        s: 85
+        saturation: 85
+        x: 0.491
+        y: 0.39
+      linkquality: 112
+      power_on_behavior:
+      update:
+        installed_version: 16785410
+        latest_version: 16785410
+        state: idle
+      update_available:
+      friendly_name: Küche - Tisch MITTE
+      supported_features: 44
+      state: 'on'
+    light.kuche_tisch_rechts:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 139
+      hs_color:
+      - 30.207
+      - 56.863
+      rgb_color:
+      - 255
+      - 183
+      - 110
+      xy_color:
+      - 0.491
+      - 0.39
+      color:
+        h: 22
+        hue: 22
+        s: 85
+        saturation: 85
+        x: 0.491
+        y: 0.39
+      linkquality: 87
+      power_on_behavior:
+      update:
+        installed_version: 16785410
+        latest_version: 16785410
+        state: idle
+      update_available:
+      friendly_name: Küche - Tisch RECHTS
+      supported_features: 44
+      state: 'on'
+    light.kuche_tisch_links:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 152
+      hs_color:
+      - 30.207
+      - 56.863
+      rgb_color:
+      - 255
+      - 183
+      - 110
+      xy_color:
+      - 0.491
+      - 0.39
+      color:
+        h: 22
+        hue: 22
+        s: 85
+        saturation: 85
+        x: 0.491
+        y: 0.39
+      linkquality: 61
+      power_on_behavior:
+      update:
+        installed_version: 16785410
+        latest_version: 16785410
+        state: idle
+      update_available:
+      friendly_name: Küche - Tisch LINKS
+      supported_features: 44
+      state: 'on'
+  icon: mdi:table-furniture
+  metadata: {}
+- id: '1704196851541'
+  name: Werkstatt Work Light
+  entities:
+    light.werkstatt_huebar:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - sunrise
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      effect:
+      color:
+        x: 0.4042
+        y: 0.3902
+      gradient:
+      - '#337aff'
+      - '#6f88ff'
+      - '#ff9644'
+      - '#ff8e22'
+      - '#ff831a'
+      linkquality: 43
+      power_on_behavior: previous
+      update:
+        installed_version: 16782340
+        latest_version: 16782340
+        state: idle
+      update_available:
+      friendly_name: Werkstatt HueBAR
+      supported_features: 44
+      state: 'on'
+    select.werkstatt_huebar_gradient_scene:
+      options:
+      - blossom
+      - crocus
+      - precious
+      - narcissa
+      - beginnings
+      - first_light
+      - horizon
+      - valley_dawn
+      - sunflare
+      - emerald_flutter
+      - memento
+      - resplendent
+      - scarlet_dream
+      - lovebirds
+      - smitten
+      - glitz_and_glam
+      - promise
+      - ruby_romance
+      - city_of_love
+      - honolulu
+      - savanna_sunset
+      - golden_pond
+      - runy_glow
+      - tropical_twilight
+      - miami
+      - cancun
+      - rio
+      - chinatown
+      - ibiza
+      - osaka
+      - tokyo
+      - motown
+      - fairfax
+      - galaxy
+      - starlight
+      - blood moon
+      - artic_aurora
+      - moonlight
+      - nebula
+      - sundown
+      - blue_lagoon
+      - palm_beach
+      - lake_placid
+      - mountain_breeze
+      - lake_mist
+      - ocean_dawn
+      - frosty_dawn
+      - sunday_morning
+      - emerald_isle
+      - spring_blossom
+      - midsummer_sun
+      - autumn_gold
+      - spring_lake
+      - winter_mountain
+      - midwinter
+      - amber_bloom
+      - lily
+      - painted_sky
+      - winter_beauty
+      - orange_fields
+      - forest_adventure
+      - blue_planet
+      - soho
+      - vapor_wave
+      - magneto
+      - tyrell
+      - disturbia
+      - hal
+      - golden_star
+      - under_the_tree
+      - silent_night
+      - rosy_sparkle
+      - festive_fun
+      - colour_burst
+      - crystalline
+      brightness: 254
+      color:
+        x: 0.4042
+        y: 0.3902
+      color_mode: color_temp
+      color_temp: 284
+      gradient:
+      - '#337aff'
+      - '#6f88ff'
+      - '#ff9644'
+      - '#ff8e22'
+      - '#ff831a'
+      linkquality: 43
+      power_on_behavior: previous
+      update:
+        installed_version: 16782340
+        latest_version: 16782340
+        state: idle
+      update_available:
+      assumed_state: true
+      friendly_name: Werkstatt HueBAR Gradient scene
+      state: sunflare
+  icon: mdi:printer-3d
+  metadata: {}
+- id: '1704196896905'
+  name: Werkstatt Night Light RED
+  entities:
+    light.werkstatt_huebar:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - sunrise
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      gradient:
+      - '#226bff'
+      - '#4166ff'
+      - '#ff9295'
+      - '#ff7a1e'
+      - '#ff851b'
+      linkquality: 87
+      power_on_behavior:
+      update:
+        installed_version: 16782340
+        latest_version: 16782340
+        state: idle
+      update_available:
+      friendly_name: Werkstatt HueBAR
+      supported_features: 44
+      color:
+        x: 0.589
+        y: 0.329
+      state: 'on'
+    select.werkstatt_huebar_gradient_scene:
+      options:
+      - blossom
+      - crocus
+      - precious
+      - narcissa
+      - beginnings
+      - first_light
+      - horizon
+      - valley_dawn
+      - sunflare
+      - emerald_flutter
+      - memento
+      - resplendent
+      - scarlet_dream
+      - lovebirds
+      - smitten
+      - glitz_and_glam
+      - promise
+      - ruby_romance
+      - city_of_love
+      - honolulu
+      - savanna_sunset
+      - golden_pond
+      - runy_glow
+      - tropical_twilight
+      - miami
+      - cancun
+      - rio
+      - chinatown
+      - ibiza
+      - osaka
+      - tokyo
+      - motown
+      - fairfax
+      - galaxy
+      - starlight
+      - blood moon
+      - artic_aurora
+      - moonlight
+      - nebula
+      - sundown
+      - blue_lagoon
+      - palm_beach
+      - lake_placid
+      - mountain_breeze
+      - lake_mist
+      - ocean_dawn
+      - frosty_dawn
+      - sunday_morning
+      - emerald_isle
+      - spring_blossom
+      - midsummer_sun
+      - autumn_gold
+      - spring_lake
+      - winter_mountain
+      - midwinter
+      - amber_bloom
+      - lily
+      - painted_sky
+      - winter_beauty
+      - orange_fields
+      - forest_adventure
+      - blue_planet
+      - soho
+      - vapor_wave
+      - magneto
+      - tyrell
+      - disturbia
+      - hal
+      - golden_star
+      - under_the_tree
+      - silent_night
+      - rosy_sparkle
+      - festive_fun
+      - colour_burst
+      - crystalline
+      brightness: 254
+      color_mode: xy
+      color_temp: 439
+      gradient:
+      - '#226bff'
+      - '#4166ff'
+      - '#ff9295'
+      - '#ff7a1e'
+      - '#ff851b'
+      linkquality: 87
+      power_on_behavior:
+      update:
+        installed_version: 16782340
+        latest_version: 16782340
+        state: idle
+      update_available:
+      assumed_state: true
+      friendly_name: Werkstatt HueBAR Gradient scene
+      color:
+        x: 0.589
+        y: 0.329
+      state: valley_dawn
+  icon: mdi:printer-3d
+  metadata: {}
+- id: '1709971139727'
+  name: Espresso OFF
+  entities:
+    switch.smartplug03:
+      device_class: outlet
+      friendly_name: SmartPlug03
+      state: 'off'
+  metadata: {}
+  icon: mdi:coffee
+- id: '1711835030697'
+  name: 'Bad NIGHT Light '
+  entities:
+    light.bad_lightstrip_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 33
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 352.913
+      - 99.608
+      rgb_color:
+      - 255
+      - 1
+      - 31
+      xy_color:
+      - 0.693
+      - 0.296
+      color:
+        x: 0.693
+        y: 0.296
+      linkquality: 193
+      power_on_behavior: previous
+      update:
+        installed_version: 16784644
+        latest_version: 16784644
+        state: idle
+      update_available:
+      friendly_name: Bad LightStrip (RGB)
+      supported_features: 44
+      state: 'on'
+  icon: mdi:bathtub-outline
+  metadata: {}
+- id: '1711835081503'
+  name: 'Bad ORANGE Light '
+  entities:
+    light.bad_lightstrip_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 71
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 37.087
+      - 99.608
+      rgb_color:
+      - 255
+      - 158
+      - 1
+      xy_color:
+      - 0.572
+      - 0.408
+      color:
+        x: 0.572
+        y: 0.408
+      linkquality: 193
+      power_on_behavior: previous
+      update:
+        installed_version: 16784644
+        latest_version: 16784644
+        state: idle
+      update_available:
+      friendly_name: Bad LightStrip (RGB)
+      supported_features: 44
+      state: 'on'
+  icon: mdi:bathtub-outline
+  metadata: {}
+- id: '1711835119470'
+  name: 'Bad DAY Light '
+  entities:
+    light.bad_lightstrip_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 150
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      color:
+        x: 0.5267
+        y: 0.4133
+      linkquality: 193
+      power_on_behavior: previous
+      update:
+        installed_version: 16784644
+        latest_version: 16784644
+        state: idle
+      update_available:
+      friendly_name: Bad LightStrip (RGB)
+      supported_features: 44
+      state: 'on'
+  icon: mdi:bathtub-outline
+  metadata: {}
+- id: '1711835155125'
+  name: 'Bad BRIGHT Light '
+  entities:
+    light.bad_lightstrip_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 250
+      color_temp_kelvin: 3546
+      color_temp: 282
+      hs_color:
+      - 27.128
+      - 43.783
+      rgb_color:
+      - 255
+      - 193
+      - 143
+      xy_color:
+      - 0.451
+      - 0.372
+      color:
+        x: 0.4031
+        y: 0.3896
+      linkquality: 18
+      power_on_behavior: previous
+      update:
+        installed_version: 16784644
+        latest_version: 16784644
+        state: idle
+      update_available:
+      friendly_name: Bad LightStrip (RGB)
+      supported_features: 44
+      state: 'on'
+  icon: mdi:bathtub-outline
+  metadata: {}
+- id: '1713631867078'
+  name: Noah - NIGHT Light
+  entities:
+    light.noah_1_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 3
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 16.963
+      - 74.902
+      rgb_color:
+      - 255
+      - 118
+      - 64
+      xy_color:
+      - 0.602
+      - 0.347
+      color:
+        x: 0.602
+        y: 0.347
+      linkquality: 131
+      power_on_behavior:
+      update:
+        installed_version: 16785412
+        latest_version: 16785412
+        state: idle
+      update_available:
+      friendly_name: Noah 1 - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.noah_2_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 3
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 17.095
+      - 70.196
+      rgb_color:
+      - 255
+      - 127
+      - 76
+      xy_color:
+      - 0.583
+      - 0.35
+      color:
+        x: 0.583
+        y: 0.35
+      linkquality: 127
+      power_on_behavior:
+      update:
+        installed_version: 16785412
+        latest_version: 16785412
+        state: idle
+      update_available:
+      friendly_name: Noah 2 - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.noah_decke:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2557
+      color_temp: 391
+      hs_color:
+      - 28.728
+      - 70.496
+      rgb_color:
+      - 255
+      - 161
+      - 75
+      xy_color:
+      - 0.541
+      - 0.389
+      color:
+        x: 0.4726
+        y: 0.413
+      linkquality: 153
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      update_available:
+      friendly_name: Noah - Decke
+      supported_features: 44
+      state: 'on'
+    light.noahs_nanoleaf_light_panels_5a_06_5:
+      restored: true
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6493
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - Color Burst
+      - Flames
+      - Forest
+      - Inner Peace
+      - Nemo
+      - Northern Lights
+      - Romantic
+      - Snowfall
+      supported_color_modes:
+      - color_temp
+      - hs
+      friendly_name: Noahs Nanoleaf - Light Panels 5A:06:5
+      supported_features: 36
+      state: unavailable
+    light.noah_bodenlampe:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode:
+      brightness:
+      linkquality: 98
+      power_on_behavior:
+      update:
+        installed_version: 16786948
+        latest_version: 16786948
+        state: idle
+      update_available:
+      friendly_name: Noah - Bodenlampe
+      supported_features: 44
+      state: 'off'
+    light.noah_kommode_hue_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      color:
+        x: 0.637
+        y: 0.353
+      linkquality: 149
+      power_on_behavior:
+      update:
+        installed_version: 16785162
+        latest_version: 16785162
+        state: idle
+      update_available:
+      friendly_name: Noah Kommode - HUE RGB
+      supported_features: 44
+      state: 'off'
+  icon: mdi:sun-wireless-outline
+  metadata: {}
+- id: '1713632161226'
+  name: Noah - Day Light BRIGHT
+  entities:
+    light.noah_1_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 30.207
+      - 56.863
+      rgb_color:
+      - 255
+      - 183
+      - 110
+      xy_color:
+      - 0.491
+      - 0.39
+      color:
+        x: 0.491
+        y: 0.39
+      linkquality: 120
+      power_on_behavior:
+      update:
+        installed_version: 16785412
+        latest_version: 16785412
+        state: idle
+      update_available:
+      friendly_name: Noah 1 - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.noah_2_play_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 30.207
+      - 56.863
+      rgb_color:
+      - 255
+      - 183
+      - 110
+      xy_color:
+      - 0.491
+      - 0.39
+      color:
+        x: 0.491
+        y: 0.39
+      linkquality: 36
+      power_on_behavior:
+      update:
+        installed_version: 16785412
+        latest_version: 16785412
+        state: idle
+      update_available:
+      friendly_name: Noah 2 - PLAY RGB
+      supported_features: 44
+      state: 'on'
+    light.noah_decke:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2557
+      color_temp: 391
+      hs_color:
+      - 28.728
+      - 70.496
+      rgb_color:
+      - 255
+      - 161
+      - 75
+      xy_color:
+      - 0.541
+      - 0.389
+      color:
+        x: 0.4726
+        y: 0.413
+      linkquality: 153
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      update_available:
+      friendly_name: Noah - Decke
+      supported_features: 44
+      state: 'on'
+    light.noahs_nanoleaf_light_panels_5a_06_5:
+      restored: true
+      min_color_temp_kelvin: 1200
+      max_color_temp_kelvin: 6493
+      min_mireds: 154
+      max_mireds: 833
+      effect_list:
+      - Color Burst
+      - Flames
+      - Forest
+      - Inner Peace
+      - Nemo
+      - Northern Lights
+      - Romantic
+      - Snowfall
+      supported_color_modes:
+      - color_temp
+      - hs
+      friendly_name: Noahs Nanoleaf - Light Panels 5A:06:5
+      supported_features: 36
+      state: unavailable
+    light.noah_bodenlampe:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 255
+      linkquality: 94
+      power_on_behavior:
+      update:
+        installed_version: 16786948
+        latest_version: 16786948
+        state: idle
+      update_available:
+      friendly_name: Noah - Bodenlampe
+      supported_features: 44
+      state: 'on'
+    light.noah_kommode_hue_rgb:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 35.493
+      - 55.686
+      rgb_color:
+      - 255
+      - 197
+      - 113
+      xy_color:
+      - 0.473
+      - 0.405
+      color:
+        x: 0.473
+        y: 0.405
+      linkquality: 145
+      power_on_behavior:
+      update:
+        installed_version: 16785162
+        latest_version: 16785162
+        state: idle
+      update_available:
+      friendly_name: Noah Kommode - HUE RGB
+      supported_features: 44
+      state: 'on'
+  icon: mdi:sun-wireless-outline
+  metadata: {}
+- id: '1713635251580'
+  name: Wohnzimmer - Day RELAXER
+  entities:
+    light.wohnzimmer_decke_hue_rgb_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 31.558
+      - 60.392
+      rgb_color:
+      - 255
+      - 182
+      - 101
+      xy_color:
+      - 0.4987
+      - 0.3969
+      color:
+        h: 23
+        hue: 23
+        s: 87
+        saturation: 87
+        x: 0.4987
+        y: 0.3969
+      linkquality: 142
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state:
+      update_available:
+      friendly_name: Wohnzimmer Decke - HUE RGB
+      supported_features: 44
+      state: 'on'
+    light.wohnzimmer_regal_hue_white_2:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 184
+      linkquality: 65
+      power_on_behavior:
+      update:
+        installed_version: 16786948
+        latest_version: 16786948
+        state: idle
+      update_available:
+      friendly_name: 'Wohnzimmer Regal - HUE WHITE '
+      supported_features: 44
+      state: 'on'
+    light.wohnzimmer_hue_go:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 41
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 25.888
+      - 77.255
+      rgb_color:
+      - 255
+      - 143
+      - 58
+      xy_color:
+      - 0.576
+      - 0.377
+      color:
+        x: 0.576
+        y: 0.377
+      linkquality: 65
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      update_available:
+      friendly_name: Wohnzimmer - Hue GO
+      supported_features: 44
+      state: 'on'
+    light.wohnzimmer_huebar:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - sunrise
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 87
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      friendly_name: Wohnzimmer HueBAR
+      supported_features: 44
+      color:
+        x: 0.5267
+        y: 0.4133
+      gradient:
+      - '#226bff'
+      - '#4166ff'
+      - '#ff9295'
+      - '#ff7a1e'
+      - '#ff851b'
+      linkquality: 43
+      power_on_behavior:
+      update:
+        installed_version: 16782340
+        latest_version: 16782340
+        state: idle
+      update_available:
+      state: 'on'
+    select.wohnzimmer_huebar_gradient_scene:
+      options:
+      - blossom
+      - crocus
+      - precious
+      - narcissa
+      - beginnings
+      - first_light
+      - horizon
+      - valley_dawn
+      - sunflare
+      - emerald_flutter
+      - memento
+      - resplendent
+      - scarlet_dream
+      - lovebirds
+      - smitten
+      - glitz_and_glam
+      - promise
+      - ruby_romance
+      - city_of_love
+      - honolulu
+      - savanna_sunset
+      - golden_pond
+      - runy_glow
+      - tropical_twilight
+      - miami
+      - cancun
+      - rio
+      - chinatown
+      - ibiza
+      - osaka
+      - tokyo
+      - motown
+      - fairfax
+      - galaxy
+      - starlight
+      - blood moon
+      - artic_aurora
+      - moonlight
+      - nebula
+      - sundown
+      - blue_lagoon
+      - palm_beach
+      - lake_placid
+      - mountain_breeze
+      - lake_mist
+      - ocean_dawn
+      - frosty_dawn
+      - sunday_morning
+      - emerald_isle
+      - spring_blossom
+      - midsummer_sun
+      - autumn_gold
+      - spring_lake
+      - winter_mountain
+      - midwinter
+      - amber_bloom
+      - lily
+      - painted_sky
+      - winter_beauty
+      - orange_fields
+      - forest_adventure
+      - blue_planet
+      - soho
+      - vapor_wave
+      - magneto
+      - tyrell
+      - disturbia
+      - hal
+      - golden_star
+      - under_the_tree
+      - silent_night
+      - rosy_sparkle
+      - festive_fun
+      - colour_burst
+      - crystalline
+      assumed_state: true
+      friendly_name: Wohnzimmer HueBAR Gradient scene
+      brightness: 87
+      color:
+        x: 0.5267
+        y: 0.4133
+      color_mode: color_temp
+      color_temp: 500
+      gradient:
+      - '#226bff'
+      - '#4166ff'
+      - '#ff9295'
+      - '#ff7a1e'
+      - '#ff851b'
+      linkquality: 43
+      power_on_behavior:
+      update:
+        installed_version: 16782340
+        latest_version: 16782340
+        state: idle
+      update_available:
+      state: unknown
+  icon: mdi:weather-sunny
+  metadata: {}
+- id: '1713635383679'
+  name: Wohnzimmer - NIGHT Light
+  entities:
+    light.wohnzimmer_decke_hue_rgb_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 31.558
+      - 60.392
+      rgb_color:
+      - 255
+      - 182
+      - 101
+      xy_color:
+      - 0.4987
+      - 0.3969
+      color:
+        h: 23
+        hue: 23
+        s: 87
+        saturation: 87
+        x: 0.4987
+        y: 0.3969
+      linkquality: 142
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state:
+      update_available:
+      friendly_name: Wohnzimmer Decke - HUE RGB
+      supported_features: 44
+      state: 'on'
+    light.wohnzimmer_regal_hue_white_2:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 74
+      linkquality: 76
+      power_on_behavior:
+      update:
+        installed_version: 16786948
+        latest_version: 16786948
+        state: idle
+      update_available:
+      friendly_name: 'Wohnzimmer Regal - HUE WHITE '
+      supported_features: 44
+      state: 'on'
+    light.wohnzimmer_hue_go:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 84
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 24.471
+      - 100
+      rgb_color:
+      - 255
+      - 104
+      - 0
+      xy_color:
+      - 0.642
+      - 0.349
+      color:
+        x: 0.642
+        y: 0.349
+      linkquality: 21
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      update_available:
+      friendly_name: Wohnzimmer - Hue GO
+      supported_features: 44
+      state: 'on'
+    light.wohnzimmer_huebar:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - sunrise
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 61
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      friendly_name: Wohnzimmer HueBAR
+      supported_features: 44
+      color:
+        x: 0.589
+        y: 0.329
+      gradient:
+      - '#226bff'
+      - '#4166ff'
+      - '#ff9295'
+      - '#ff7a1e'
+      - '#ff851b'
+      linkquality: 43
+      power_on_behavior:
+      update:
+        installed_version: 16782340
+        latest_version: 16782340
+        state: idle
+      update_available:
+      state: 'on'
+    select.wohnzimmer_huebar_gradient_scene:
+      options:
+      - blossom
+      - crocus
+      - precious
+      - narcissa
+      - beginnings
+      - first_light
+      - horizon
+      - valley_dawn
+      - sunflare
+      - emerald_flutter
+      - memento
+      - resplendent
+      - scarlet_dream
+      - lovebirds
+      - smitten
+      - glitz_and_glam
+      - promise
+      - ruby_romance
+      - city_of_love
+      - honolulu
+      - savanna_sunset
+      - golden_pond
+      - runy_glow
+      - tropical_twilight
+      - miami
+      - cancun
+      - rio
+      - chinatown
+      - ibiza
+      - osaka
+      - tokyo
+      - motown
+      - fairfax
+      - galaxy
+      - starlight
+      - blood moon
+      - artic_aurora
+      - moonlight
+      - nebula
+      - sundown
+      - blue_lagoon
+      - palm_beach
+      - lake_placid
+      - mountain_breeze
+      - lake_mist
+      - ocean_dawn
+      - frosty_dawn
+      - sunday_morning
+      - emerald_isle
+      - spring_blossom
+      - midsummer_sun
+      - autumn_gold
+      - spring_lake
+      - winter_mountain
+      - midwinter
+      - amber_bloom
+      - lily
+      - painted_sky
+      - winter_beauty
+      - orange_fields
+      - forest_adventure
+      - blue_planet
+      - soho
+      - vapor_wave
+      - magneto
+      - tyrell
+      - disturbia
+      - hal
+      - golden_star
+      - under_the_tree
+      - silent_night
+      - rosy_sparkle
+      - festive_fun
+      - colour_burst
+      - crystalline
+      assumed_state: true
+      friendly_name: Wohnzimmer HueBAR Gradient scene
+      brightness: 61
+      color:
+        x: 0.589
+        y: 0.329
+      color_mode: xy
+      color_temp: 439
+      gradient:
+      - '#226bff'
+      - '#4166ff'
+      - '#ff9295'
+      - '#ff7a1e'
+      - '#ff851b'
+      linkquality: 43
+      power_on_behavior:
+      update:
+        installed_version: 16782340
+        latest_version: 16782340
+        state: idle
+      update_available:
+      state: unknown
+  icon: mdi:weather-sunny
+  metadata: {}
+- id: '1713635450771'
+  name: Wohnzimmer - Day BRIGHT Light
+  entities:
+    light.wohnzimmer_decke_hue_rgb_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 31.558
+      - 60.392
+      rgb_color:
+      - 255
+      - 182
+      - 101
+      xy_color:
+      - 0.4987
+      - 0.3969
+      color:
+        h: 23
+        hue: 23
+        s: 87
+        saturation: 87
+        x: 0.4987
+        y: 0.3969
+      linkquality: 142
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state:
+      update_available:
+      friendly_name: Wohnzimmer Decke - HUE RGB
+      supported_features: 44
+      state: 'on'
+    light.wohnzimmer_regal_hue_white_2:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 255
+      linkquality: 43
+      power_on_behavior:
+      update:
+        installed_version: 16786948
+        latest_version: 16786948
+        state: idle
+      update_available:
+      friendly_name: 'Wohnzimmer Regal - HUE WHITE '
+      supported_features: 44
+      state: 'on'
+    light.wohnzimmer_hue_go:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6666
+      min_mireds: 150
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 3012
+      color_temp: 332
+      hs_color:
+      - 27.806
+      - 56.57
+      rgb_color:
+      - 255
+      - 177
+      - 110
+      xy_color:
+      - 0.496
+      - 0.383
+      color:
+        x: 0.4362
+        y: 0.4038
+      linkquality: 21
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      update_available:
+      friendly_name: Wohnzimmer - Hue GO
+      supported_features: 44
+      state: 'on'
+    light.wohnzimmer_huebar:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - sunrise
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 138
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      friendly_name: Wohnzimmer HueBAR
+      supported_features: 44
+      color:
+        x: 0.4042
+        y: 0.3902
+      gradient:
+      - '#226bff'
+      - '#4166ff'
+      - '#ff9295'
+      - '#ff7a1e'
+      - '#ff851b'
+      linkquality: 43
+      power_on_behavior:
+      update:
+        installed_version: 16782340
+        latest_version: 16782340
+        state: idle
+      update_available:
+      state: 'on'
+    select.wohnzimmer_huebar_gradient_scene:
+      options:
+      - blossom
+      - crocus
+      - precious
+      - narcissa
+      - beginnings
+      - first_light
+      - horizon
+      - valley_dawn
+      - sunflare
+      - emerald_flutter
+      - memento
+      - resplendent
+      - scarlet_dream
+      - lovebirds
+      - smitten
+      - glitz_and_glam
+      - promise
+      - ruby_romance
+      - city_of_love
+      - honolulu
+      - savanna_sunset
+      - golden_pond
+      - runy_glow
+      - tropical_twilight
+      - miami
+      - cancun
+      - rio
+      - chinatown
+      - ibiza
+      - osaka
+      - tokyo
+      - motown
+      - fairfax
+      - galaxy
+      - starlight
+      - blood moon
+      - artic_aurora
+      - moonlight
+      - nebula
+      - sundown
+      - blue_lagoon
+      - palm_beach
+      - lake_placid
+      - mountain_breeze
+      - lake_mist
+      - ocean_dawn
+      - frosty_dawn
+      - sunday_morning
+      - emerald_isle
+      - spring_blossom
+      - midsummer_sun
+      - autumn_gold
+      - spring_lake
+      - winter_mountain
+      - midwinter
+      - amber_bloom
+      - lily
+      - painted_sky
+      - winter_beauty
+      - orange_fields
+      - forest_adventure
+      - blue_planet
+      - soho
+      - vapor_wave
+      - magneto
+      - tyrell
+      - disturbia
+      - hal
+      - golden_star
+      - under_the_tree
+      - silent_night
+      - rosy_sparkle
+      - festive_fun
+      - colour_burst
+      - crystalline
+      assumed_state: true
+      friendly_name: Wohnzimmer HueBAR Gradient scene
+      brightness: 137
+      color:
+        x: 0.4042
+        y: 0.3902
+      color_mode: color_temp
+      color_temp: 284
+      gradient:
+      - '#226bff'
+      - '#4166ff'
+      - '#ff9295'
+      - '#ff7a1e'
+      - '#ff851b'
+      linkquality: 43
+      power_on_behavior:
+      update:
+        installed_version: 16782340
+        latest_version: 16782340
+        state: idle
+      update_available:
+      state: unknown
+  icon: mdi:weather-sunny
+  metadata: {}
+- id: '1732470905712'
+  name: Bett - BRIGHT
+  entities:
+    light.sabine_hue_go_black:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      linkquality: 58
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      update_available:
+      friendly_name: Sabine - Hue GO BLACK
+      supported_features: 44
+      color:
+        x: 0.4042
+        y: 0.3902
+      state: 'on'
+    light.wolfgang_hue_go_black:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      color:
+        x: 0.4042
+        y: 0.3902
+      linkquality: 40
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      update_available:
+      friendly_name: Wolfgang - Hue GO BLACK
+      supported_features: 44
+      state: 'on'
+  icon: mdi:bed
+  metadata: {}
+- id: '1732470951009'
+  name: Bett - Relax Bright
+  entities:
+    light.sabine_hue_go_black:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 204
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      linkquality: 58
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      update_available:
+      friendly_name: Sabine - Hue GO BLACK
+      supported_features: 44
+      color:
+        x: 0.5267
+        y: 0.4133
+      state: 'on'
+    light.wolfgang_hue_go_black:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 204
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      color:
+        x: 0.5267
+        y: 0.4133
+      linkquality: 40
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      update_available:
+      friendly_name: Wolfgang - Hue GO BLACK
+      supported_features: 44
+      state: 'on'
+  icon: mdi:bed
+  metadata: {}
+- id: '1732471038093'
+  name: Bett - Relax
+  entities:
+    light.sabine_hue_go_black:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 128
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      linkquality: 58
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      update_available:
+      friendly_name: Sabine - Hue GO BLACK
+      supported_features: 44
+      color:
+        x: 0.5267
+        y: 0.4133
+      state: 'on'
+    light.wolfgang_hue_go_black:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 128
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      color:
+        x: 0.5267
+        y: 0.4133
+      linkquality: 36
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      update_available:
+      friendly_name: Wolfgang - Hue GO BLACK
+      supported_features: 44
+      state: 'on'
+  icon: mdi:bed
+  metadata: {}
+- id: '1732471553167'
+  name: Bett - Night
+  entities:
+    light.sabine_hue_go_black:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 3
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      linkquality: 58
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      update_available:
+      friendly_name: Sabine - Hue GO BLACK
+      supported_features: 44
+      color:
+        x: 0.589
+        y: 0.329
+      state: 'on'
+    light.wolfgang_hue_go_black:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 3
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      color:
+        x: 0.589
+        y: 0.329
+      linkquality: 40
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      update_available:
+      friendly_name: Wolfgang - Hue GO BLACK
+      supported_features: 44
+      state: 'on'
+  icon: mdi:bed
+  metadata: {}
+- id: '1732471593335'
+  name: Bett - Night Bright
+  entities:
+    light.sabine_hue_go_black:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 64
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      linkquality: 58
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      update_available:
+      friendly_name: Sabine - Hue GO BLACK
+      supported_features: 44
+      color:
+        x: 0.589
+        y: 0.329
+      state: 'on'
+    light.wolfgang_hue_go_black:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 64
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      color:
+        x: 0.589
+        y: 0.329
+      linkquality: 40
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      update_available:
+      friendly_name: Wolfgang - Hue GO BLACK
+      supported_features: 44
+      state: 'on'
+  icon: mdi:bed
+  metadata: {}
+- id: '1732471631737'
+  name: Bett - Night Brightest
+  entities:
+    light.sabine_hue_go_black:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 128
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      linkquality: 58
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      update_available:
+      friendly_name: Sabine - Hue GO BLACK
+      supported_features: 44
+      color:
+        x: 0.589
+        y: 0.329
+      state: 'on'
+    light.wolfgang_hue_go_black:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 128
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      color:
+        x: 0.589
+        y: 0.329
+      linkquality: 40
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      update_available:
+      friendly_name: Wolfgang - Hue GO BLACK
+      supported_features: 44
+      state: 'on'
+  icon: mdi:bed
+  metadata: {}
+- id: '1760713364727'
+  name: Schlafzimmer OFF
+  entities:
+    light.sabine_hue_go_black:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      color:
+        x: 0.5267
+        y: 0.4133
+      linkquality: 65
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      update_available: false
+      friendly_name: Sabine - Hue GO BLACK
+      supported_features: 44
+      state: 'off'
+    light.wolfgang_hue_go_black:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      color:
+        x: 0.5267
+        y: 0.4133
+      linkquality: 54
+      power_on_behavior:
+      update:
+        installed_version: -1
+        latest_version: -1
+        state: idle
+      update_available: false
+      friendly_name: Wolfgang - Hue GO Black
+      supported_features: 44
+      state: 'off'
+  icon: mdi:desk-lamp-off
+  metadata: {}
+- id: '1760713605879'
+  name: Wohnzimmer OFF
+  entities:
+    light.wohnzimmer_regal_hue_white_2:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode:
+      brightness:
+      linkquality: 51
+      power_on_behavior:
+      update:
+        installed_version: 16786948
+        latest_version: 16786948
+        state: idle
+      update_available:
+      friendly_name: 'Wohnzimmer Regal - HUE WHITE '
+      supported_features: 44
+      state: 'off'
+    light.wohnzimmer_huebar:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - candle
+      - fireplace
+      - colorloop
+      - sunrise
+      - finish_effect
+      - stop_effect
+      - stop_hue_effect
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      color:
+        x: 0.5267
+        y: 0.4133
+      gradient:
+      - '#226bff'
+      - '#4166ff'
+      - '#ff9295'
+      - '#ff7a1e'
+      - '#ff851b'
+      linkquality: 36
+      power_on_behavior:
+      update:
+        installed_version: 16782340
+        latest_version: 16782340
+        state: idle
+      update_available: false
+      friendly_name: Wohnzimmer HueBAR
+      supported_features: 44
+      state: 'off'
+    select.wohnzimmer_huebar_gradient_scene:
+      options:
+      - blossom
+      - crocus
+      - precious
+      - narcissa
+      - beginnings
+      - first_light
+      - horizon
+      - valley_dawn
+      - sunflare
+      - emerald_flutter
+      - memento
+      - resplendent
+      - scarlet_dream
+      - lovebirds
+      - smitten
+      - glitz_and_glam
+      - promise
+      - ruby_romance
+      - city_of_love
+      - honolulu
+      - savanna_sunset
+      - golden_pond
+      - runy_glow
+      - tropical_twilight
+      - miami
+      - cancun
+      - rio
+      - chinatown
+      - ibiza
+      - osaka
+      - tokyo
+      - motown
+      - fairfax
+      - galaxy
+      - starlight
+      - blood moon
+      - artic_aurora
+      - moonlight
+      - nebula
+      - sundown
+      - blue_lagoon
+      - palm_beach
+      - lake_placid
+      - mountain_breeze
+      - lake_mist
+      - ocean_dawn
+      - frosty_dawn
+      - sunday_morning
+      - emerald_isle
+      - spring_blossom
+      - midsummer_sun
+      - autumn_gold
+      - spring_lake
+      - winter_mountain
+      - midwinter
+      - amber_bloom
+      - lily
+      - painted_sky
+      - winter_beauty
+      - orange_fields
+      - forest_adventure
+      - blue_planet
+      - soho
+      - vapor_wave
+      - magneto
+      - tyrell
+      - disturbia
+      - hal
+      - golden_star
+      - under_the_tree
+      - silent_night
+      - rosy_sparkle
+      - festive_fun
+      - colour_burst
+      - crystalline
+      brightness: 112
+      color:
+        x: 0.5267
+        y: 0.4133
+      color_mode: color_temp
+      color_temp: 500
+      gradient:
+      - '#226bff'
+      - '#4166ff'
+      - '#ff9295'
+      - '#ff7a1e'
+      - '#ff851b'
+      linkquality: 36
+      power_on_behavior:
+      update:
+        installed_version: 16782340
+        latest_version: 16782340
+        state: idle
+      update_available: false
+      assumed_state: true
+      friendly_name: Wohnzimmer HueBAR Gradient scene
+      state: unknown
+  icon: mdi:desk-lamp-off
+  metadata: {}

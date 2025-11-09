@@ -1,0 +1,19 @@
+# Sensitive Files
+**/*password*
+**/*secret*
+**/*token*
+**/*.key
+**/*.pem
+
+# Temp Files
+*.tar.gz
+*.log
+.DS_Store
+
+# SSH Keys
+.ssh/
+*.pub
+
+# Backups (außer ha-config-backup/)
+*backup*.db
+*backup*.json

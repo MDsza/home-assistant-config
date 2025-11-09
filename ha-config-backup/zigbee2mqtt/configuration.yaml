@@ -1,0 +1,137 @@
+homeassistant:
+  enabled: true
+mqtt:
+  server: mqtt://192.168.111.3:1883
+  user: mqtt_user
+  password: "***MASKED***"  
+  base_topic: zigbee2mqtt
+serial:
+  port: /dev/ttyUSB0
+frontend:
+  port: 8099
+  enabled: true
+advanced:
+  log_level: info
+device_options: {}
+ota:
+  zigbee_ota_override_index_location: my_index.json
+devices:
+  '0x00158d0007e1e5da':
+    friendly_name: Aqara Cube
+    legacy: true
+  '0x0017880100f56d33':
+    friendly_name: Wohnzimmer Decke - HUE RGB
+  '0x0017880102876832':
+    friendly_name: 'Wohnzimmer Regal - HUE WHITE '
+  '0x00178801091cae8e':
+    friendly_name: Wolfgang Desk-1_Left - PLAY RGB
+  '0x00178801091cc123':
+    friendly_name: Wolfgang Desk-1_Right - PLAY RGB
+  '0x00178801098c76e7':
+    friendly_name: Wolfgang Desk-2_TOP - PLAY RGB
+  '0x00178801091d0c2b':
+    friendly_name: Sabine Desk_DOWN - PLAY RGB
+  '0x00178801042db297':
+    friendly_name: Sabine Desk_UP - PLAY RGB
+  '0x0017880102b50d9f':
+    friendly_name: Salon Designlampe_1 - HUE WHITE
+  '0x0017880100d99354':
+    friendly_name: Salon Designlampe_2 - HUE RGB
+  '0x0017880100f56d70':
+    friendly_name: Salon Designlampe_3 - HUE RGB
+  '0x001788010b1d1d68':
+    friendly_name: Küche Stehlampe -  HUE RGB
+  '0x001788010be96799':
+    friendly_name: Noah 1 - PLAY RGB
+  '0x001788010be9678f':
+    friendly_name: Noah 2 - PLAY RGB
+  '0x0000000000431877':
+    friendly_name: Dach - SWITCH - HUE TAB
+  '0x0017880102e2c976':
+    friendly_name: Sabine - HUE DIMMER
+    legacy: true
+  '0x0017880104b60b6f':
+    friendly_name: Dach - HUE MOTION SENSOR Sabine
+  '0x0017880102e2df58':
+    friendly_name: Wolfgang - HUE DIMMER
+    legacy: true
+  '0x001788010b3a2e22':
+    friendly_name: Salon NightLight - HUE WHITE E14
+  '0x001788010b220661':
+    friendly_name: Sabine Regal - HUE RGB
+  '0x0017880104ac838d':
+    friendly_name: Noah - HUE DIMMER
+    legacy: true
+  '0xd0cf5efffeba5a61':
+    friendly_name: Küche - Ikea E14
+  '0x0017880108712530':
+    friendly_name: Küche - HUE DIMMER
+    legacy: true
+  '0x0017880104acce12':
+    friendly_name: Wohnzimmer - HUE DIMMER
+    legacy: true
+  '0x00158d0008300535':
+    friendly_name: TempHumPress-Sensor
+  '0x00158d000808fc9f':
+    friendly_name: Vibration-Sensor
+  '0x00158d00080cf33b':
+    friendly_name: Switch-Mini 1
+  '0x00158d0007e414ce':
+    friendly_name: TEST - Aqara MOTION Sensor
+  '0x001788010bcda0c5':
+    friendly_name: Küche - HUE MOTION SENSOR
+  '0x001788010bcdab3b':
+    friendly_name: Eingang - HUE MOTION SENSOR
+  '0x001788010bcda6ba':
+    friendly_name: Server - HUE MOTION SENSORS
+  '0x001788010ba95d7b':
+    friendly_name: Wohnzimmer Kommode - HUE RGB
+  '0x00158d000864b38e':
+    friendly_name: Eingang - Aqara Door Sensor 1
+  '0x00178801098c76fc':
+    friendly_name: Wolfgang Desk-1_Top - PLAY RGB
+  '0x00158d0007e60f75':
+    friendly_name: TempHumPress-IN-Sensor
+  '0x001788010bdec889':
+    friendly_name: Küche - Espresso Machines
+  '0x0017880104b4cac0':
+    friendly_name: 'Dach - HUE MOTION SENSOR Wolfgang '
+  '0x001788010c697ca1':
+    friendly_name: Küche - Tisch RECHTS
+  '0x001788010cbdfbf8':
+    friendly_name: Küche - Tisch MITTE
+  '0x001788010c697a1f':
+    friendly_name: Küche - Tisch LINKS
+  '0x001788010ba90c3f':
+    friendly_name: Noah - Decke
+  '0x00178801035e5395':
+    friendly_name: Noah - Bodenlampe
+  '0x00178801041ea6f1':
+    friendly_name: Noah - Kommode
+  '0x0017880104ac80de':
+    friendly_name: Noah - Hue Dimmer 2
+  '0x90fd9ffffee06bdf':
+    friendly_name: IKEA Tradfri 1
+  '0x001788010c52db27':
+    friendly_name: Wohnzimmer HueBAR
+  '0x001788010d35fb0c':
+    friendly_name: Bad Hue Tap Dial Switch Black
+  '0x00158d0007e6ee0f':
+    friendly_name: EingangOBEN - Aqara Door Sensor 2
+  '0x0017880109131379':
+    friendly_name: Bad LightStrip (RGB)
+  '0x001788010cb678c3':
+    friendly_name: Wohnzimmer - Hue GO
+  '0x001788010d17f643':
+    friendly_name: Sabine - Decke Infuse M
+  '0x003c84fffe057021':
+    friendly_name: '0x003c84fffe057021'
+  '0x001788010bd91788':
+    friendly_name: Noah - Hue Dimmer NEU
+  '0x00158d00084e1880':
+    friendly_name: Wolfgang - Mini Switch 01
+  '0x001788010cb72d35':
+    friendly_name: Sabine - Hue GO BLACK
+  '0x001788010d1cce3c':
+    friendly_name: Wolfgang - Hue GO Black
+version: 4

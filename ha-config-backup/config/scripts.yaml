@@ -1,0 +1,29 @@
+bett_an_aus:
+  alias: Bett AN/AUS
+  sequence:
+  - type: toggle
+    device_id: 82d4e42ef4ec01e1c8f8f74f8f61a24a
+    entity_id: 67b0a749dcdc79e7fc4be9c10aaaae83
+    domain: light
+  - type: toggle
+    device_id: e8a90bbbd40d62097c50139c7e01b0e0
+    entity_id: dfc425eb37e3691d44d250db1617fe58
+    domain: light
+  description: ''
+  icon: mdi:floor-lamp
+neues_skript:
+  alias: Neues Skript
+  sequence:
+  - type: toggle
+    device_id: e8a90bbbd40d62097c50139c7e01b0e0
+    entity_id: dfc425eb37e3691d44d250db1617fe58
+    domain: light
+  description: ''
+neues_skript_duplizieren:
+  alias: Neues Skript (Duplizieren)
+  sequence:
+  - type: toggle
+    device_id: e8a90bbbd40d62097c50139c7e01b0e0
+    entity_id: dfc425eb37e3691d44d250db1617fe58
+    domain: light
+  description: ''
