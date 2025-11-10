@@ -1,0 +1,268 @@
+blueprint:
+  name: Zigbee2MQTT - Philips Hue Tap dial switch (8719514440937/8719514440999) actions
+  description: 'Define actions your Philips Hue Tap dial switch using Zigbee2MQTT.
+    For your button entity, choose the right sensor with your button name and the
+    entity id which ends with ''_action'', e.g. ''sensor.bedroom_bed_tap_dial_switch_action''
+
+    '
+  domain: automation
+  input:
+    button_sensor:
+      name: Philips Hue Tap dial switch sensor entity
+      description: Sensor for Philips Hue Tap dial switch to use (Use sensor with
+        entity_id ends with _action)
+      selector:
+        entity:
+          domain:
+          - sensor
+          multiple: false
+    remote_button_1_single_press:
+      name: Button 1 Single Press
+      description: Action to run on button 1 single press
+      default: []
+      selector:
+        action: {}
+    remote_button_1_press_release:
+      name: Button 1 Press Release
+      description: Action to run on button 1 press release
+      default: []
+      selector:
+        action: {}
+    remote_button_1_hold:
+      name: Button 1 Hold
+      description: Action to run on button 1 hold
+      default: []
+      selector:
+        action: {}
+    remote_button_1_hold_release:
+      name: Button 1 Hold Release
+      description: Action to run on button 1 hold release
+      default: []
+      selector:
+        action: {}
+    remote_button_2_single_press:
+      name: Button 2 Single Press
+      description: Action to run on button 2 single press
+      default: []
+      selector:
+        action: {}
+    remote_button_2_press_release:
+      name: Button 2 Press Release
+      description: Action to run on button 2 press release
+      default: []
+      selector:
+        action: {}
+    remote_button_2_hold:
+      name: Button 2 Hold
+      description: Action to run on button 2 hold
+      default: []
+      selector:
+        action: {}
+    remote_button_2_hold_release:
+      name: Button 2 Hold Release
+      description: Action to run on button 2 hold release
+      default: []
+      selector:
+        action: {}
+    remote_button_3_single_press:
+      name: Button 3 Single Press
+      description: Action to run on button 3 single press
+      default: []
+      selector:
+        action: {}
+    remote_button_3_press_release:
+      name: Button 3 Press Release
+      description: Action to run on button 3 press release
+      default: []
+      selector:
+        action: {}
+    remote_button_3_hold:
+      name: Button 3 Hold
+      description: Action to run on button 3 hold
+      default: []
+      selector:
+        action: {}
+    remote_button_3_hold_release:
+      name: Button 3 Hold Release
+      description: Action to run on button 3 hold release
+      default: []
+      selector:
+        action: {}
+    remote_button_4_single_press:
+      name: Button 4 Single Press
+      description: Action to run on button 4 single press
+      default: []
+      selector:
+        action: {}
+    remote_button_4_press_release:
+      name: Button 4 Press Release
+      description: Action to run on button 4 press release
+      default: []
+      selector:
+        action: {}
+    remote_button_4_hold:
+      name: Button 4 Hold
+      description: Action to run on button 4 hold
+      default: []
+      selector:
+        action: {}
+    remote_button_4_hold_release:
+      name: Button 4 Hold Release
+      description: Action to run on button 4 hold release
+      default: []
+      selector:
+        action: {}
+    remote_dial_rotate_left_step:
+      name: Dial rotate left step
+      description: Action to run on dial rotate left step
+      default: []
+      selector:
+        action: {}
+    remote_dial_rotate_left_slow:
+      name: Dial rotate left slow
+      description: Action to run on dial rotate left slow
+      default: []
+      selector:
+        action: {}
+    remote_dial_rotate_left_fast:
+      name: Dial rotate left fast
+      description: Action to run on dial rotate left fast
+      default: []
+      selector:
+        action: {}
+    remote_dial_rotate_right_step:
+      name: Dial rotate right step
+      description: Action to run on dial rotate right step
+      default: []
+      selector:
+        action: {}
+    remote_dial_rotate_right_slow:
+      name: Dial rotate right slow
+      description: Action to run on dial rotate right slow
+      default: []
+      selector:
+        action: {}
+    remote_dial_rotate_right_fast:
+      name: Dial rotate right fast
+      description: Action to run on dial rotate right fast
+      default: []
+      selector:
+        action: {}
+  source_url: https://gist.github.com/freakshock88/672fc91e6981da4ca0c49e71b0c05032
+mode: restart
+max_exceeded: silent
+trigger:
+- platform: state
+  entity_id: !input button_sensor
+  to: button_1_press
+- platform: state
+  entity_id: !input button_sensor
+  to: button_1_press_release
+- platform: state
+  entity_id: !input button_sensor
+  to: button_1_hold
+- platform: state
+  entity_id: !input button_sensor
+  to: button_1_hold_release
+- platform: state
+  entity_id: !input button_sensor
+  to: button_2_press
+- platform: state
+  entity_id: !input button_sensor
+  to: button_2_press_release
+- platform: state
+  entity_id: !input button_sensor
+  to: button_2_hold
+- platform: state
+  entity_id: !input button_sensor
+  to: button_2_hold_release
+- platform: state
+  entity_id: !input button_sensor
+  to: button_3_press
+- platform: state
+  entity_id: !input button_sensor
+  to: button_3_press_release
+- platform: state
+  entity_id: !input button_sensor
+  to: button_3_hold
+- platform: state
+  entity_id: !input button_sensor
+  to: button_3_hold_release
+- platform: state
+  entity_id: !input button_sensor
+  to: button_4_press
+- platform: state
+  entity_id: !input button_sensor
+  to: button_4_press_release
+- platform: state
+  entity_id: !input button_sensor
+  to: button_4_hold
+- platform: state
+  entity_id: !input button_sensor
+  to: button_4_hold_release
+- platform: state
+  entity_id: !input button_sensor
+  to: dial_rotate_left_step
+- platform: state
+  entity_id: !input button_sensor
+  to: dial_rotate_left_slow
+- platform: state
+  entity_id: !input button_sensor
+  to: dial_rotate_left_fast
+- platform: state
+  entity_id: !input button_sensor
+  to: dial_rotate_right_step
+- platform: state
+  entity_id: !input button_sensor
+  to: dial_rotate_right_slow
+- platform: state
+  entity_id: !input button_sensor
+  to: dial_rotate_right_fast
+action:
+- variables:
+    action: '{{ trigger.to_state.state }}'
+- choose:
+  - conditions: '{{ action == ''button_1_press'' }}'
+    sequence: !input remote_button_1_single_press
+  - conditions: '{{ action == ''button_1_press_release'' }}'
+    sequence: !input remote_button_1_press_release
+  - conditions: '{{ action == ''button_1_hold'' }}'
+    sequence: !input remote_button_1_hold
+  - conditions: '{{ action == ''button_1_hold_release'' }}'
+    sequence: !input remote_button_1_hold_release
+  - conditions: '{{ action == ''button_2_press'' }}'
+    sequence: !input remote_button_2_single_press
+  - conditions: '{{ action == ''button_2_press_release'' }}'
+    sequence: !input remote_button_2_press_release
+  - conditions: '{{ action == ''button_2_hold'' }}'
+    sequence: !input remote_button_2_hold
+  - conditions: '{{ action == ''button_2_hold_release'' }}'
+    sequence: !input remote_button_2_hold_release
+  - conditions: '{{ action == ''button_3_press'' }}'
+    sequence: !input remote_button_3_single_press
+  - conditions: '{{ action == ''button_3_press_release'' }}'
+    sequence: !input remote_button_3_press_release
+  - conditions: '{{ action == ''button_3_hold'' }}'
+    sequence: !input remote_button_3_hold
+  - conditions: '{{ action == ''button_3_hold_release'' }}'
+    sequence: !input remote_button_3_hold_release
+  - conditions: '{{ action == ''button_4_press'' }}'
+    sequence: !input remote_button_4_single_press
+  - conditions: '{{ action == ''button_4_press_release'' }}'
+    sequence: !input remote_button_4_press_release
+  - conditions: '{{ action == ''button_4_hold'' }}'
+    sequence: !input remote_button_4_hold
+  - conditions: '{{ action == ''button_4_hold_release'' }}'
+    sequence: !input remote_button_4_hold_release
+  - conditions: '{{ action == ''dial_rotate_left_step'' }}'
+    sequence: !input remote_dial_rotate_left_step
+  - conditions: '{{ action == ''dial_rotate_left_slow'' }}'
+    sequence: !input remote_dial_rotate_left_slow
+  - conditions: '{{ action == ''dial_rotate_left_fast'' }}'
+    sequence: !input remote_dial_rotate_left_fast
+  - conditions: '{{ action == ''dial_rotate_right_step'' }}'
+    sequence: !input remote_dial_rotate_right_step
+  - conditions: '{{ action == ''dial_rotate_right_slow'' }}'
+    sequence: !input remote_dial_rotate_right_slow
+  - conditions: '{{ action == ''dial_rotate_right_fast'' }}'
+    sequence: !input remote_dial_rotate_right_fast

@@ -499,27 +499,102 @@
         - 308af6f8058bee0f3fd5f93f0bd53008
 - id: '1654231878085'
   alias: Treppe - HUE MOTION Sensor V3 + (OBEN)
-  description: Motion sensor SIMPLIFIED TEST - direkte Scene ohne Time Conditions
+  description: Motion sensor mit zeit-basierten Szenen (Treppe Oben)
   triggers:
   - entity_id: binary_sensor.treppe_hue_motion_sensor_oben_belegung
     to: 'on'
     trigger: state
   actions:
-  - action: scene.turn_on
-    target:
-      entity_id: scene.treppe_night_red
+  - choose:
+    - conditions:
+      - condition: time
+        after: 07:00:00
+        before: 08:00:00
+      sequence:
+      - action: scene.turn_on
+        target:
+          entity_id: scene.treppe_night_red
+    - conditions:
+      - condition: time
+        after: 08:00:00
+        before: '19:00:00'
+      sequence:
+      - target:
+          entity_id: light.treppe_nightlight_hue_white_e14
+        data:
+          brightness: 39
+          transition: 1
+        action: light.turn_on
+    - conditions:
+      - condition: time
+        after: '19:00:00'
+        before: '22:00:00'
+      sequence:
+      - action: scene.turn_on
+        target:
+          entity_id: scene.treppe_night_red
+    - conditions:
+      - condition: time
+        after: '22:00:00'
+        before: 07:00:00
+      sequence:
+      - action: scene.turn_on
+        target:
+          entity_id: scene.treppe_night_light
+    default:
+    - action: scene.turn_on
+      target:
+        entity_id: scene.treppe_night_red
   mode: restart
 - id: '1659897140950'
   alias: Treppe - HUE MOTION Sensor V3 + (UNTEN)
-  description: Motion sensor SIMPLIFIED TEST - direkte Scene ohne Time Conditions
+  description: Motion sensor mit zeit-basierten Szenen (Treppe Unten)
   triggers:
   - entity_id: binary_sensor.dach_hue_motion_sensor_wolfgang_occupancy
     to: 'on'
     trigger: state
   actions:
-  - action: scene.turn_on
-    target:
-      entity_id: scene.treppe_night_red
+  - choose:
+    - conditions:
+      - condition: time
+        after: 07:00:00
+        before: 08:00:00
+      sequence:
+      - action: scene.turn_on
+        target:
+          entity_id: scene.treppe_night_red
+    - conditions:
+      - condition: time
+        after: 08:00:00
+        before: '19:00:00'
+      sequence:
+      - target:
+          entity_id: light.treppe_nightlight_hue_white_e14
+        data:
+          brightness: 239
+          transition: 5
+          brightness_pct: 75
+        action: light.turn_on
+    - conditions:
+      - condition: time
+        after: '19:00:00'
+        before: '22:00:00'
+      sequence:
+      - action: scene.turn_on
+        target:
+          entity_id: scene.treppe_night_red
+    - conditions:
+      - condition: time
+        after: '22:00:00'
+        before: 07:00:00
+      sequence:
+      - action: scene.turn_on
+        target:
+          entity_id: scene.treppe_night_light
+    default:
+    - action: scene.turn_on
+      target:
+        entity_id: scene.treppe_night_red
   mode: restart
 - id: '1731252000000'
   alias: Treppe - AUTO OFF nach 30s ohne Bewegung
@@ -528,11 +603,11 @@
   - platform: state
     entity_id: binary_sensor.treppe_motion_combined
     to: 'off'
-    for: 00:00:30
+    for: '00:00:30'
   - platform: state
     entity_id: light.treppe_nightlight_hue_white_e14
     to: 'on'
-    for: 00:00:30
+    for: '00:00:30'
   conditions:
   - condition: state
     entity_id: light.treppe_nightlight_hue_white_e14
@@ -1273,20 +1348,3 @@
         type: notify
         message: test
   mode: single
-- id: '1762802914881'
-  alias: Treppe - HUE MOTION SENSOR (UNTEN)
-  description: ''
-  use_blueprint:
-    path: freakshock88/motion_illuminance_activated_entity.yaml
-    input:
-      motion_sensor: binary_sensor.treppe_hue_motion_sensor_unten_occupancy
-      target_entity: light.treppe_nightlight_hue_white_e14
-- id: '1762803693444'
-  alias: Treppe - HUE MOTION SENSOR (OBEN)
-  description: ''
-  use_blueprint:
-    path: freakshock88/motion_illuminance_activated_entity.yaml
-    input:
-      motion_sensor: binary_sensor.treppe_hue_motion_sensor_oben_occupancy
-      target_entity: light.treppe_nightlight_hue_white_e14
-      no_motion_wait: input_number.treppe_auto_off_timer

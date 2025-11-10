@@ -1,0 +1,140 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+automation: !include automations.yaml
+# script: !include scripts.yaml
+scene: !include scenes.yaml
+
+# Logger Aktivierung manuell (nur temporär sonst zu viele Daten)
+# logger:
+#   default: info
+#   logs:
+#     homeassistant.core: debug
+
+# Influx DB-Verbindung zur Visualisierung meiner Daten in Grafana
+influxdb:
+  api_version: 2
+  host: 192.168.111.81
+  port: 8086
+  token: untj7FEnSiX8uKOfMWfO-j6Cdw0QAUuuRmZeH8ghe3GOQPFRl3FUcIS-MM5RiO8qsgnHfBeubZk9MXPymYvAVg==
+  organization: HomeLab
+  bucket: homeassistant
+  ssl: false
+  verify_ssl: false
+  tags:
+    source: HA
+  tags_attributes:
+    - friendly_name
+  default_measurement: state
+  exclude:
+    domains:
+      - persistent_notification
+      - person
+  include:
+    domains:
+      - sensor
+      - binary_sensor
+      - sun
+      - light
+      - cover
+    entities:
+      - weather.home
+
+# Sensor-Konfiguration
+sensor:
+  - platform: template
+    sensors:
+      example_sensor:
+        value_template: "{{ states('sensor.original_sensor') | float(default=0) }}"
+        unit_of_measurement: 'Einheiten'
+      id_buzz_current_battery_capacity:
+        friendly_name: "Aktuelle Batteriekapazität des ID Buzz"
+        unit_of_measurement: 'kWh'
+        value_template: >-
+          {% set battery_percentage = states('sensor.id_buzzzabo_battery_level') | float(default=0) %}
+          {% set usable_capacity_kwh = 77.0 %}
+          {{ (battery_percentage / 100 * usable_capacity_kwh) | round(2) }}    
+      id_buzz_daily_average_km:
+        unit_of_measurement: 'km'
+        value_template: >
+          {% set odometer_now = states('sensor.id_buzzzabo_odometer') | default('0') | int %}
+          {% set odometer_start = 30 %}
+          {% set start_date = '2024-02-23' %}
+          {% set days_passed = ((now().date() - strptime(start_date, '%Y-%m-%d').date()).days) %}
+          {% set km_diff = odometer_now - odometer_start %}
+          {% if days_passed > 0 %}
+            {{ (km_diff / days_passed) | round(2) }}
+          {% else %}
+            0
+          {% endif %}
+      id_buzz_yearly_forecast_km:
+        unit_of_measurement: 'km'
+        value_template: >
+          {% set odometer_now = states('sensor.id_buzzzabo_odometer') | default('0') | int %}
+          {% set odometer_start = 30 %}
+          {% set start_date = '2024-02-23' %}
+          {% set total_days_in_year = 365 %}
+          {% set days_passed = ((now().date() - strptime(start_date, '%Y-%m-%d').date()).days) %}
+          {% set remaining_days = total_days_in_year - days_passed %}
+          {% set km_diff = odometer_now - odometer_start %}
+          {% set daily_average = (km_diff / days_passed) | round(2) %}
+          {% if days_passed > 0 %}
+            {{ (odometer_now + (daily_average * remaining_days)) | round(0) }}
+          {% else %}
+            0
+          {% endif %}
+      id_buzz_leasing_progress:
+        unit_of_measurement: '%'
+        value_template: >
+          {% set max_leasing_km = 30000 %}
+          {% set current_km = states('sensor.id_buzzzabo_odometer') | default('0') | int %}
+          {% set percentage_used = (current_km / max_leasing_km * 100) | round(2) %}
+          {% if percentage_used > 100 %}
+            100
+          {% else %}
+            {{ percentage_used }}
+          {% endif %}
+      id_buzz_time_progress:
+        unit_of_measurement: '%'
+        value_template: >
+          {% set start_date = '2024-02-23' %}
+          {% set end_date = '2025-02-23' %}
+          {% set total_days = (strptime(end_date, '%Y-%m-%d') - strptime(start_date, '%Y-%m-%d')).days %}
+          {% set days_passed = (now().date() - strptime(start_date, '%Y-%m-%d').date()).days %}
+          {% set time_progress = (days_passed / total_days * 100) | round(2) %}
+          {{ time_progress }}
+      id_buzz_electricity_cost:
+        friendly_name: "ID Buzz Stromkosten"
+        unit_of_measurement: 'CHF'
+        value_template: >-
+          {% set price_per_kwh = 0.33 %}
+          {% set consumption_per_100km = 25 %}
+          {% set current_km = states('sensor.id_buzzzabo_odometer') | default('0') | int %}
+          {{ ((current_km / 100) * consumption_per_100km * price_per_kwh) | round(2) }}
+      id_buzz_estimated_annual_cost:
+        friendly_name: "Geschätzte jährliche Stromkosten"
+        unit_of_measurement: 'CHF'
+        value_template: >-
+          {% set price_per_kwh = 0.33 %}
+          {% set consumption_per_100km = 25 %}
+          {% set start_date = '2024-02-23' %}
+          {% set odometer_start = 30 %}
+          {% set current_km = states('sensor.id_buzzzabo_odometer') | default('0') | int %}
+          {% set days_passed = ((now().date() - strptime(start_date, '%Y-%m-%d').date()).days) %}
+          {% set total_days_in_year = 365 %}
+          {% set remaining_days = total_days_in_year - days_passed %}
+          {% set km_diff = current_km - odometer_start %}
+          {% set daily_average = (km_diff / days_passed) | round(2) %}
+          {% set estimated_total_km = current_km + (daily_average * remaining_days) %}
+          {{ ((estimated_total_km / 100) * consumption_per_100km * price_per_kwh) | round(2) }}
+      id_buzz_km_heute:
+        friendly_name: "Heute gefahrene Kilometer"
+        unit_of_measurement: 'km'
+        value_template: >-
+          {% set start_km = states('input_number.km_stand_zu_tagesbeginn') | float(default=0) %}
+          {% set current_km = states('sensor.id_buzzzabo_odometer') | float(default=0) %}
+          {{ (current_km - start_km) | round(2) }}

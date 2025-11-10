@@ -3,7 +3,7 @@ homeassistant:
 mqtt:
   server: mqtt://192.168.111.3:1883
   user: mqtt_user
-  password: rim-hilt-TOPPLE-ultra
+  password: "***MASKED***"
   base_topic: zigbee2mqtt
 serial:
   port: /dev/ttyUSB0
@@ -48,7 +48,7 @@ devices:
   '0x0017880102e2c976':
     friendly_name: Sabine - HUE DIMMER
   '0x0017880104b60b6f':
-    friendly_name: Dach - HUE MOTION SENSOR Sabine
+    friendly_name: Treppe - HUE MOTION SENSOR (OBEN)
   '0x0017880102e2df58':
     friendly_name: Wolfgang - HUE DIMMER
   '0x001788010b3a2e22':
@@ -88,7 +88,7 @@ devices:
   '0x001788010bdec889':
     friendly_name: Küche - Espresso Machines
   '0x0017880104b4cac0':
-    friendly_name: 'Dach - HUE MOTION SENSOR Wolfgang '
+    friendly_name: Treppe - HUE MOTION SENSOR (UNTEN)
   '0x001788010c697ca1':
     friendly_name: Küche - Tisch RECHTS
   '0x001788010cbdfbf8':

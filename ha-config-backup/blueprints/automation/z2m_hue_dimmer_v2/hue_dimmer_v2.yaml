@@ -1,0 +1,83 @@
+blueprint:
+  name: Hue Dimmer V2 Controller (Z2M 2.x)
+  description: For Hue Dimmer V2 that sends down_press instead of down_press_release
+  domain: automation
+  input:
+    controller:
+      name: Controller Name
+      description: Name in Zigbee2MQTT
+      default: ""
+    base_topic:
+      name: Base MQTT topic
+      default: zigbee2mqtt
+    on_released:
+      name: ON Button
+      default: []
+      selector:
+        action: {}
+    on_held:
+      name: ON Held
+      default: []
+      selector:
+        action: {}
+    off_released:
+      name: OFF Button
+      default: []
+      selector:
+        action: {}
+    off_held:
+      name: OFF Held
+      default: []
+      selector:
+        action: {}
+    up_released:
+      name: UP Button
+      default: []
+      selector:
+        action: {}
+    up_held:
+      name: UP Held
+      default: []
+      selector:
+        action: {}
+    down_released:
+      name: DOWN Button
+      default: []
+      selector:
+        action: {}
+    down_held:
+      name: DOWN Held
+      default: []
+      selector:
+        action: {}
+mode: parallel
+max: 6
+trigger_variables:
+  base_topic: !input base_topic
+  controller: !input controller
+trigger:
+  - platform: mqtt
+    topic: "{{ base_topic ~ '/' ~ controller }}"
+action:
+  - variables:
+      controller: !input controller
+  - choose:
+      - conditions: "{{('hold' in trigger.payload_json.action) or ('press' in trigger.payload_json.action)}}"
+        sequence:
+          - choose:
+              - conditions: '{{ trigger.payload_json.action == "on_press" }}'
+                sequence: !input on_released
+              - conditions: '{{ trigger.payload_json.action == "on_hold" }}'
+                sequence: !input on_held
+              - conditions: '{{ trigger.payload_json.action == "off_press" }}'
+                sequence: !input off_released
+              - conditions: '{{ trigger.payload_json.action == "off_hold" }}'
+                sequence: !input off_held
+              - conditions: '{{ trigger.payload_json.action == "up_press" }}'
+                sequence: !input up_released
+              - conditions: '{{ trigger.payload_json.action == "up_hold" }}'
+                sequence: !input up_held
+              - conditions: '{{ trigger.payload_json.action == "down_press" }}'
+                sequence: !input down_released
+              - conditions: '{{ trigger.payload_json.action == "down_hold" }}'
+                sequence: !input down_held
