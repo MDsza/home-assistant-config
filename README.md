@@ -247,6 +247,30 @@ Immer:
 
 ## Verwendung
 
+### ⚠️ KRITISCHER WORKFLOW - Source of Truth
+
+**Home Assistant Live-System (192.168.111.3) ist IMMER die Source of Truth!**
+
+Wenn du lokal an Config-Dateien arbeitest, IMMER:
+1. **PULL** vom Live-System → lokal
+2. Lokal ändern
+3. **PUSH** zurück zum System
+4. YAML Reload in HA UI
+
+```bash
+# PULL vom Live-System
+ssh -i ~/.ssh/claude_z2m_key hassiossh@192.168.111.3 -p 22222 "sudo cat /config/automations.yaml" > config/automations.yaml
+ssh -i ~/.ssh/claude_z2m_key hassiossh@192.168.111.3 -p 22222 "sudo cat /config/scenes.yaml" > config/scenes.yaml
+
+# Nach lokaler Änderung: PUSH zurück
+cat config/automations.yaml | ssh -i ~/.ssh/claude_z2m_key hassiossh@192.168.111.3 -p 22222 "sudo tee /config/automations.yaml > /dev/null"
+
+# YAML Reload in HA UI
+# → Developer Tools → YAML → Reload All
+```
+
+**Grund:** Wolfgang arbeitet direkt in HA UI, lokale Festplatte kann veraltet sein!
+
 ### Backup Wiederherstellen
 
 Siehe `ha-config-backup/README.md` für detaillierte Anleitung.
